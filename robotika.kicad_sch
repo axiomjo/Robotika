@@ -7,7 +7,7 @@
 	(title_block
 		(title "UAS Robotika")
 		(date "2024-04-05")
-		(rev "1")
+		(rev "2")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Socket"
@@ -960,6 +960,164 @@
 				)
 			)
 			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 2.794)
@@ -3722,10 +3880,10 @@
 		(uuid "437c19ab-0222-4757-8298-c638282ac73e")
 	)
 	(junction
-		(at 228.6 44.45)
+		(at 160.02 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "493e1e06-9e4a-4655-ab90-1f92854160cc")
+		(uuid "43d8a759-fe01-4758-8a84-6c6f14c0a473")
 	)
 	(junction
 		(at 247.65 53.34)
@@ -3738,6 +3896,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "585e1eb1-891f-4109-9378-2b5775f95825")
+	)
+	(junction
+		(at 228.6 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5af7d28f-38ac-4e35-bfe3-35f927aa2048")
 	)
 	(junction
 		(at 76.2 132.08)
@@ -3756,12 +3920,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6f773bea-de71-4fb7-b355-0f752b1459a0")
-	)
-	(junction
-		(at 160.02 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b095070-736e-445d-9a59-4ae09403a297")
 	)
 	(junction
 		(at 55.88 72.39)
@@ -3818,16 +3976,16 @@
 		(uuid "dfad742f-8930-4263-89e6-ff0127749acb")
 	)
 	(junction
+		(at 191.77 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e96310cc-82b4-42bb-8670-9634b58c93ac")
+	)
+	(junction
 		(at 128.27 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efca6f7e-2f31-4ae8-aa39-e627147f69a9")
-	)
-	(junction
-		(at 191.77 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f030a38f-7e33-470f-8702-7e83f0617eb2")
 	)
 	(junction
 		(at 83.82 35.56)
@@ -3935,16 +4093,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 44.45) (xy 236.22 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07c47b4d-ab8d-46a0-82f2-1e26520ea1e0")
-	)
-	(wire
-		(pts
 			(xy 64.77 148.59) (xy 68.58 148.59)
 		)
 		(stroke
@@ -4035,7 +4183,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 82.55) (xy 171.45 82.55)
+			(xy 151.13 82.55) (xy 160.02 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4072,16 +4220,6 @@
 			(type default)
 		)
 		(uuid "246cae22-1bd6-4955-a25c-8eb32fd2f067")
-	)
-	(wire
-		(pts
-			(xy 191.77 44.45) (xy 208.28 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2615413c-9b18-4300-8041-2561f2c17b83")
 	)
 	(wire
 		(pts
@@ -4315,6 +4453,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 82.55) (xy 171.45 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d0efcb9-badb-489e-8e77-d15b111c1a5e")
+	)
+	(wire
+		(pts
 			(xy 224.79 127) (xy 198.12 127)
 		)
 		(stroke
@@ -4322,6 +4470,16 @@
 			(type default)
 		)
 		(uuid "6d97866a-b6d1-4117-ae09-db66a3ca0425")
+	)
+	(wire
+		(pts
+			(xy 228.6 44.45) (xy 236.22 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dbf1a7a-e580-4046-bddb-fc06a89b30d5")
 	)
 	(wire
 		(pts
@@ -4625,6 +4783,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 44.45) (xy 208.28 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad96b04d-3d0f-460a-afc3-1636779ec445")
+	)
+	(wire
+		(pts
 			(xy 166.37 110.49) (xy 168.91 110.49)
 		)
 		(stroke
@@ -4772,16 +4940,6 @@
 			(type default)
 		)
 		(uuid "c5bc86e3-a79d-4d4a-bb91-bf0d84e3c34b")
-	)
-	(wire
-		(pts
-			(xy 151.13 82.55) (xy 160.02 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8f01f4d-8103-401a-a701-710933d126cc")
 	)
 	(wire
 		(pts
@@ -5202,6 +5360,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 191.77 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "08979f26-6158-43f8-ab70-86fe2286051f")
+		(property "Reference" "C9"
+			(at 195.58 46.1009 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 195.58 48.6409 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 192.7352 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 191.77 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+		)
+		(pin "2"
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Interface_USB:CH340C")
 		(at 78.74 148.59 0)
 		(unit 1)
@@ -5324,7 +5552,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12bc8d4d-9ba4-4827-b351-5f2285c1edf2")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR019"
 			(at 167.64 48.26 0)
 			(effects
 				(font
@@ -5374,7 +5602,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR08")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -5408,7 +5636,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 82.042 67.31 90)
 			(effects
 				(font
@@ -5451,146 +5679,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 228.6 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "150dbac6-7a10-486c-928f-5ade8806f3eb")
-		(property "Reference" "C2"
-			(at 232.41 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 232.41 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.5652 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 228.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 228.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7b00898c-04d2-4782-8d43-3abb20bfe241")
-		)
-		(pin "2"
-			(uuid "dc5190ac-ac1a-4a89-bb22-78cb0fa8d091")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 191.77 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "16ec158e-0fb7-4983-892c-38799e4ea397")
-		(property "Reference" "C1"
-			(at 195.58 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 195.58 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 192.7352 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 191.77 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "08b355ac-a1d8-4705-a0c4-864ee6f3c7b1")
-		)
-		(pin "2"
-			(uuid "9e0e6d07-52e3-4571-b95a-288c341a22d1")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 74.93 67.31 0)
 		(unit 1)
@@ -5618,7 +5706,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 73.152 67.31 90)
 			(effects
 				(font
@@ -5670,7 +5758,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cab3239-64c4-4d3c-b78a-fa800af297d2")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR03"
 			(at 35.56 163.83 0)
 			(effects
 				(font
@@ -5720,7 +5808,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR015")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -5736,7 +5824,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e000456-fd9d-4876-83e7-d67c3b34a0f3")
-		(property "Reference" "U1"
+		(property "Reference" "U3"
 			(at 153.3241 95.25 0)
 			(effects
 				(font
@@ -5850,7 +5938,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U1")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -5866,7 +5954,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25116df6-8c31-4033-b654-20ef20bc47ac")
-		(property "Reference" "C8"
+		(property "Reference" "C7"
 			(at 175.26 85.0899 0)
 			(effects
 				(font
@@ -5920,7 +6008,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C8")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -5936,7 +6024,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "28734cde-5131-46a0-8ae6-d2db4fb9a959")
-		(property "Reference" "U7"
+		(property "Reference" "U1"
 			(at 73.66 29.21 0)
 			(effects
 				(font
@@ -5991,7 +6079,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U7")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -6007,7 +6095,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a8d7beb-6766-4af4-abb0-6ffc80df7dad")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR02"
 			(at 35.56 146.05 0)
 			(effects
 				(font
@@ -6057,7 +6145,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR016")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -6073,7 +6161,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c0a185b-befd-4618-be3f-867b497afa4c")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR013"
 			(at 83.82 39.37 0)
 			(effects
 				(font
@@ -6123,7 +6211,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR012")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -6139,7 +6227,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2df150f9-6474-4aa1-a3e3-ce73a6a2ee21")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 256.54 44.4499 0)
 			(effects
 				(font
@@ -6157,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 255.27 44.45 0)
 			(effects
 				(font
@@ -6193,7 +6281,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -6209,7 +6297,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "389b0b1a-44d2-46bf-9560-879f4e0e043b")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR028"
 			(at 247.65 63.5 0)
 			(effects
 				(font
@@ -6259,7 +6347,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR02")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -6275,7 +6363,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c619465-36ec-49d3-87b5-5cc5bafcd9ec")
-		(property "Reference" "U6"
+		(property "Reference" "U5"
 			(at 219.71 38.1 0)
 			(effects
 				(font
@@ -6332,7 +6420,77 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U6")
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 228.6 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ddf0fbf-b4cc-4876-86d9-bdc8955c375e")
+		(property "Reference" "C10"
+			(at 232.41 46.1009 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100u"
+			(at 232.41 48.6409 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.5652 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 228.6 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 228.6 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+		)
+		(pin "2"
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -6348,7 +6506,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45eb6c36-2d85-4496-ade0-3d427382918f")
-		(property "Reference" "SW2"
+		(property "Reference" "SW1"
 			(at 123.19 95.25 0)
 			(effects
 				(font
@@ -6364,7 +6522,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
 			(at 123.19 97.79 0)
 			(effects
 				(font
@@ -6400,7 +6558,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "SW2")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -6416,7 +6574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b216b31-5429-4867-8b68-c2f6a7308e1c")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR011"
 			(at 76.2 134.62 0)
 			(effects
 				(font
@@ -6466,7 +6624,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR09")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -6482,7 +6640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f61ebd2-d6cc-4460-add9-836d04b8fcba")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR027"
 			(at 240.03 100.33 0)
 			(effects
 				(font
@@ -6532,7 +6690,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR024")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -6548,7 +6706,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60d6206e-3dab-4425-87fe-e5a873908bfc")
-		(property "Reference" "C6"
+		(property "Reference" "C1"
 			(at 39.37 148.5899 0)
 			(effects
 				(font
@@ -6602,7 +6760,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C6")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -6618,7 +6776,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ba3fd83-e88c-42c9-aade-776afcf756cd")
-		(property "Reference" "C3"
+		(property "Reference" "C6"
 			(at 171.45 46.9899 0)
 			(effects
 				(font
@@ -6672,7 +6830,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C3")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -6688,7 +6846,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6d8e46ab-98ec-4a6f-9f15-5895ee3bd706")
-		(property "Reference" "C7"
+		(property "Reference" "C2"
 			(at 52.07 148.5899 0)
 			(effects
 				(font
@@ -6742,7 +6900,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C7")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -6758,7 +6916,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "728b8b77-e219-4634-b9fd-c974d23de8bc")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR023"
 			(at 228.6 132.08 0)
 			(effects
 				(font
@@ -6809,7 +6967,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR026")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -6825,7 +6983,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "781086e7-bd03-4cef-8746-1b3f4715fcc9")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR017"
 			(at 151.13 86.36 0)
 			(effects
 				(font
@@ -6875,7 +7033,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR018")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -6891,7 +7049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78b23423-d7f8-44dc-9ef4-83a998f1e68e")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 36.83 46.99 0)
 			(effects
 				(font
@@ -6988,7 +7146,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "J2")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7004,7 +7162,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e980a5f-0e7d-4df2-a4da-084dbec264df")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR012"
 			(at 78.74 170.18 0)
 			(effects
 				(font
@@ -7054,7 +7212,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR010")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -7070,7 +7228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "817d678f-c148-4490-a365-873d0ee0cb15")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR020"
 			(at 171.45 97.79 0)
 			(effects
 				(font
@@ -7120,7 +7278,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR019")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7136,7 +7294,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "833bc59e-1505-4474-89b3-6a85abdbc4dd")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR026"
 			(at 236.22 48.26 0)
 			(effects
 				(font
@@ -7186,7 +7344,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR021")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -7220,7 +7378,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 266.7 107.95 0)
 			(effects
 				(font
@@ -7290,7 +7448,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 266.7 123.19 0)
 			(effects
 				(font
@@ -7342,7 +7500,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c0ae944-c0a8-49b6-94cf-2eb20588fbf3")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR018"
 			(at 151.13 142.24 0)
 			(effects
 				(font
@@ -7392,7 +7550,77 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR020")
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 160.02 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90fcf789-7c2e-4242-b1f2-fad16cd81435")
+		(property "Reference" "C5"
+			(at 163.83 84.2009 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 163.83 86.7409 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.9852 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+		)
+		(pin "2"
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -7408,7 +7636,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9320fa7e-06d7-457c-816b-2d26fd55c575")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR09"
 			(at 73.66 52.07 0)
 			(effects
 				(font
@@ -7458,7 +7686,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR013")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -7474,7 +7702,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "949e8b22-0044-48d3-84b0-5bb8de5db880")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR08"
 			(at 60.96 39.37 0)
 			(effects
 				(font
@@ -7524,7 +7752,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR011")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -7540,7 +7768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "967d73c5-25d7-4862-9163-6000173a8bb9")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR021"
 			(at 208.28 48.26 0)
 			(effects
 				(font
@@ -7590,7 +7818,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR07")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7606,7 +7834,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97b9f77f-e972-4d9e-a01f-f3b18e72c6f3")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR016"
 			(at 139.7 107.95 0)
 			(effects
 				(font
@@ -7657,7 +7885,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR027")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7673,7 +7901,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "981b7638-2c44-4db9-b3c2-d5f35a7eba92")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR024"
 			(at 232.41 151.13 0)
 			(effects
 				(font
@@ -7723,7 +7951,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR028")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7739,7 +7967,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a42dd1f-ea57-49a3-a6ed-e8901a705084")
-		(property "Reference" "C5"
+		(property "Reference" "C4"
 			(at 87.63 40.6399 0)
 			(effects
 				(font
@@ -7793,7 +8021,77 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C5")
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 60.96 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1158455-5fb9-4dea-a8b3-8bf800c56053")
+		(property "Reference" "C3"
+			(at 64.77 39.7509 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 64.77 42.2909 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 61.9252 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 60.96 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 60.96 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+		)
+		(pin "2"
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -7809,7 +8107,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba62d8f8-1162-4f65-980a-e561b5ab3c84")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR022"
 			(at 228.6 116.84 0)
 			(effects
 				(font
@@ -7860,7 +8158,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR025")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7876,7 +8174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c185ff18-3c8b-41d6-829b-4ab187a2f72d")
-		(property "Reference" "U3"
+		(property "Reference" "U6"
 			(at 242.2241 93.98 0)
 			(effects
 				(font
@@ -7973,7 +8271,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U3")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -7989,7 +8287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c48a3cd8-14fe-4b98-b4d6-6427d255b1ef")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR06"
 			(at 48.26 163.83 0)
 			(effects
 				(font
@@ -8039,7 +8337,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR014")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -8055,7 +8353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf6523c7-b093-4c0e-8e5a-0ae7e8f0265b")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR014"
 			(at 83.82 77.47 0)
 			(effects
 				(font
@@ -8105,7 +8403,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR06")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -8139,7 +8437,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 126.492 91.44 90)
 			(effects
 				(font
@@ -8191,7 +8489,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d44e17f9-a23c-4617-9819-5d5ee6d7308c")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR05"
 			(at 48.26 146.05 0)
 			(effects
 				(font
@@ -8241,7 +8539,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR017")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -8315,76 +8613,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 60.96 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dfbc46d1-735e-4d14-948d-fd528485f8a6")
-		(property "Reference" "C4"
-			(at 64.77 40.6399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 64.77 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 61.9252 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 60.96 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "93d82331-5946-48df-97d0-347c2a2435af")
-		)
-		(pin "2"
-			(uuid "80f51d11-f4cf-42aa-b615-1e0880b3b415")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 182.88 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8393,7 +8621,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea57c03e-4e3d-484a-be5c-a475478d8196")
-		(property "Reference" "C9"
+		(property "Reference" "C8"
 			(at 186.69 85.0899 0)
 			(effects
 				(font
@@ -8447,77 +8675,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 160.02 86.36 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eae5339a-226d-47b4-bd56-4a02ea84b1f2")
-		(property "Reference" "C10"
-			(at 163.83 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 163.83 87.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.9852 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.02 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 160.02 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "32cb3c45-93f7-4f52-bc9a-87a9e51bbf5e")
-		)
-		(pin "2"
-			(uuid "86efdd78-aea9-4eb1-8427-aebb6ca65961")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C10")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -8598,7 +8756,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f36fc669-e256-487b-b658-ef3d569275e7")
-		(property "Reference" "SW1"
+		(property "Reference" "SW2"
 			(at 243.84 38.1 0)
 			(effects
 				(font
@@ -8650,7 +8808,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "SW1")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -8666,7 +8824,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4ec94e8-6d72-44e0-9699-722e7dbf6105")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR015"
 			(at 114.3 111.76 0)
 			(effects
 				(font
@@ -8716,7 +8874,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR022")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -8732,7 +8890,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fafef6ac-b799-4ab6-83b8-f91e5e18fada")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR07"
 			(at 55.88 55.88 0)
 			(effects
 				(font
@@ -8782,7 +8940,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -8798,7 +8956,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcc2dc28-451e-4e6f-8944-e2f7be0eff96")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR010"
 			(at 74.93 77.47 0)
 			(effects
 				(font
@@ -8848,7 +9006,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR05")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -8864,7 +9022,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd99afbf-0835-41dc-baa0-19229e004cda")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR025"
 			(at 234.95 100.33 0)
 			(effects
 				(font
@@ -8914,7 +9072,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR023")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
