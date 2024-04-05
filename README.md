@@ -1,10 +1,9 @@
 # Robotika
- UAS Pemrograman Robotika
+UAS Pemrograman Robotika.
 
-Soal praktik UAS Pemrograman Robotika
+Soal praktik UAS Pemrograman Robotika.
 
-Robot yang dibuat:
--RC Car dengan ukuran kecil
+RC Car dengan ukuran kecil.
 
 Specs:
 1. MCU = ESP8266
