@@ -8,7 +8,7 @@ RC Car dengan ukuran kecil.
 Specs:
 1. MCU = ESP8266
 2. Drive motors = DC Motor
-3. Motor driver = 2x L293D
+3. Motor driver = L293D
 4. RGB lights
 
 
