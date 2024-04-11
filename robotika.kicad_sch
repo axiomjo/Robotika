@@ -2238,6 +2238,88 @@
 				)
 			)
 		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+		)
 		(symbol "RF_Module:ESP-12F"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3139,22 +3221,22 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_SPST"
+		(symbol "Switch:SW_SPDT"
 			(pin_names
 				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 3.175 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "SW_SPST"
-				(at 0 -2.54 0)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3171,6 +3253,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3179,7 +3270,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch"
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3188,19 +3279,10 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch lever"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_SPST_0_0"
+			(symbol "SW_SPDT_0_1"
 				(circle
 					(center -2.032 0)
-					(radius 0.508)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -3211,7 +3293,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.524 1.778)
+						(xy -1.651 0.254) (xy 1.651 2.286)
 					)
 					(stroke
 						(width 0)
@@ -3222,8 +3304,19 @@
 					)
 				)
 				(circle
-					(center 2.032 0)
-					(radius 0.508)
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
 					(stroke
 						(width 0)
 						(type default)
@@ -3233,9 +3326,20 @@
 					)
 				)
 			)
-			(symbol "SW_SPST_1_1"
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 2.54 180)
 					(length 2.54)
 					(name "A"
 						(effects
@@ -3253,7 +3357,7 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -5.08 0 0)
 					(length 2.54)
 					(name "B"
 						(effects
@@ -3263,6 +3367,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3850,76 +3972,82 @@
 		)
 	)
 	(junction
-		(at 151.13 82.55)
+		(at 232.41 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06ba3131-e189-4acf-9e25-dbd2485e81b8")
+	)
+	(junction
+		(at 181.61 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0b5d1b89-09d0-4427-b07f-7f18bf2a7e35")
 	)
 	(junction
-		(at 171.45 91.44)
+		(at 109.22 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1737122d-fd75-4ad0-ac9c-f3f0ca330378")
+	)
+	(junction
+		(at 201.93 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1acd2b53-fa02-4619-9ff5-ca8658f2fabf")
 	)
 	(junction
-		(at 228.6 53.34)
+		(at 29.21 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2096eeb7-84b3-47dd-924c-6a985a963949")
+		(uuid "1bca5599-644d-4296-8e61-4e0579a3d07c")
 	)
 	(junction
-		(at 208.28 44.45)
+		(at 234.95 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3214e14d-8c98-439b-9fa8-244b3b15c20b")
+		(uuid "1f372dab-97f0-489d-955a-08e3c1768927")
 	)
 	(junction
-		(at 191.77 53.34)
+		(at 69.85 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "437c19ab-0222-4757-8298-c638282ac73e")
+		(uuid "26fe2b39-58af-46ed-b078-782c32d87f8a")
 	)
 	(junction
-		(at 160.02 82.55)
+		(at 44.45 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ddab0ba-0973-42c1-8625-08f75e20f6ec")
+	)
+	(junction
+		(at 190.5 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "43d8a759-fe01-4758-8a84-6c6f14c0a473")
 	)
 	(junction
-		(at 247.65 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5614c99c-4861-4464-a77e-53c15d0ee8ff")
-	)
-	(junction
-		(at 182.88 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "585e1eb1-891f-4109-9378-2b5775f95825")
-	)
-	(junction
-		(at 228.6 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5af7d28f-38ac-4e35-bfe3-35f927aa2048")
-	)
-	(junction
-		(at 76.2 132.08)
+		(at 128.27 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "618a49e3-54eb-433b-93c8-11d3cec93a54")
 	)
 	(junction
-		(at 171.45 82.55)
+		(at 201.93 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "674031d8-57aa-4533-965e-277698e45902")
 	)
 	(junction
-		(at 236.22 44.45)
+		(at 97.79 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6f773bea-de71-4fb7-b355-0f752b1459a0")
+		(uuid "6f676a1f-57e6-471d-ac0a-65a3cf53bb53")
+	)
+	(junction
+		(at 53.34 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7da8a363-9992-425c-9f11-0e19ecc26c10")
 	)
 	(junction
 		(at 55.88 72.39)
@@ -3934,10 +4062,10 @@
 		(uuid "96e1b2df-d961-46c5-a320-ab6025a66bb9")
 	)
 	(junction
-		(at 234.95 143.51)
+		(at 240.03 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9754774a-6035-4fa1-a402-771a75b87b41")
+		(uuid "9e18600b-c13e-4b94-9a92-4ff3607be32c")
 	)
 	(junction
 		(at 60.96 35.56)
@@ -3946,28 +4074,16 @@
 		(uuid "9fbf8f7e-96b9-45e0-9c74-d942444ab4cd")
 	)
 	(junction
-		(at 232.41 143.51)
+		(at 90.17 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bcfeff78-8e17-46a2-bf9a-a09421521d70")
+		(uuid "b477cd30-5638-412b-bbfd-6fd5d33d5d80")
 	)
 	(junction
-		(at 219.71 53.34)
+		(at 53.34 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d486bdf6-0eda-47d7-a505-0291c0447464")
-	)
-	(junction
-		(at 240.03 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d50eb076-baac-4c60-ac07-c7696666ca2f")
-	)
-	(junction
-		(at 167.64 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dad694c0-8837-449a-9675-a5310f80f541")
+		(uuid "cc466a2a-7ad7-44a6-a30d-5fb224ebcfbf")
 	)
 	(junction
 		(at 73.66 45.72)
@@ -3976,13 +4092,13 @@
 		(uuid "dfad742f-8930-4263-89e6-ff0127749acb")
 	)
 	(junction
-		(at 191.77 44.45)
+		(at 81.28 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e96310cc-82b4-42bb-8670-9634b58c93ac")
+		(uuid "ed1e831a-388b-441c-bdfe-ad4412e15050")
 	)
 	(junction
-		(at 128.27 102.87)
+		(at 158.75 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efca6f7e-2f31-4ae8-aa39-e627147f69a9")
@@ -3993,84 +4109,94 @@
 		(color 0 0 0 0)
 		(uuid "f1278058-6501-41a1-a517-127d94a8fe06")
 	)
-	(no_connect
-		(at 166.37 123.19)
-		(uuid "01fb8f1f-76d1-4d6a-8f14-85c072ffc902")
+	(junction
+		(at 90.17 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd7b9762-f528-4f08-9935-648eebacd5b1")
 	)
 	(no_connect
-		(at 88.9 153.67)
+		(at 140.97 104.14)
 		(uuid "064e9c1d-c82b-4738-9563-a851a8927b50")
 	)
 	(no_connect
-		(at 88.9 156.21)
+		(at 140.97 106.68)
 		(uuid "0921bccb-3024-415c-be53-64b81f160117")
 	)
 	(no_connect
-		(at 135.89 128.27)
+		(at 166.37 82.55)
 		(uuid "09d7617b-7472-4ff7-ba52-8946fb15068a")
 	)
 	(no_connect
-		(at 135.89 118.11)
+		(at 166.37 72.39)
 		(uuid "0f1d23ca-e4cf-4249-a120-b4034846dd2d")
 	)
 	(no_connect
-		(at 88.9 146.05)
+		(at 196.85 69.85)
+		(uuid "155549d2-2252-4430-9b3c-98625d3142ac")
+	)
+	(no_connect
+		(at 140.97 96.52)
 		(uuid "1a9142f2-d089-46a2-a69a-a69b5e54cbbc")
+	)
+	(no_connect
+		(at 110.49 138.43)
+		(uuid "1bb62ecd-38ba-4a29-b7d4-cf0542f78eeb")
 	)
 	(no_connect
 		(at 52.07 85.09)
 		(uuid "5dc7e87c-5fb4-4c13-b53e-bd99c6ce0f6e")
 	)
 	(no_connect
-		(at 88.9 151.13)
+		(at 140.97 101.6)
 		(uuid "6422bd05-1c91-4116-aa1f-2f10d980eff1")
 	)
 	(no_connect
-		(at 135.89 113.03)
+		(at 166.37 67.31)
 		(uuid "70c66471-d12e-4535-b4c2-114c1ab42154")
 	)
 	(no_connect
-		(at 68.58 156.21)
+		(at 120.65 106.68)
 		(uuid "775bea05-cdda-4950-a27b-64af42be6a5b")
 	)
 	(no_connect
-		(at 88.9 148.59)
+		(at 140.97 99.06)
 		(uuid "790b0eab-9f8f-4615-bca0-1aaa4946c77d")
 	)
 	(no_connect
-		(at 166.37 125.73)
+		(at 196.85 80.01)
 		(uuid "825378ca-f274-4426-a783-1defe8b443ab")
 	)
 	(no_connect
-		(at 166.37 107.95)
+		(at 196.85 62.23)
 		(uuid "933f8ae4-7a2f-4a7d-987c-b827672ea8f7")
 	)
 	(no_connect
-		(at 166.37 102.87)
+		(at 196.85 57.15)
 		(uuid "959be81e-dd18-4b3b-b7e0-8feb5c04268b")
 	)
 	(no_connect
-		(at 135.89 123.19)
+		(at 166.37 77.47)
 		(uuid "9748cccd-a172-4162-861a-bb51b012e6ee")
 	)
 	(no_connect
-		(at 135.89 125.73)
+		(at 166.37 80.01)
 		(uuid "9c247c27-8952-4af9-887a-4868b8cab369")
 	)
 	(no_connect
-		(at 135.89 120.65)
+		(at 166.37 74.93)
 		(uuid "b2e62ef7-8510-4a97-97a1-a700f73fe9b0")
 	)
 	(no_connect
-		(at 135.89 130.81)
+		(at 166.37 85.09)
 		(uuid "c508ab5e-ff36-4965-add8-2cd2c3f38bd0")
 	)
 	(no_connect
-		(at 68.58 140.97)
+		(at 120.65 91.44)
 		(uuid "cdede1b1-359f-415b-8481-47381ad6a633")
 	)
 	(no_connect
-		(at 88.9 158.75)
+		(at 140.97 109.22)
 		(uuid "d335c890-ff7e-4e03-badd-e6ad8a6cbea8")
 	)
 	(no_connect
@@ -4078,22 +4204,32 @@
 		(uuid "ead0b4bc-6745-4ef0-9022-15f7db18342f")
 	)
 	(no_connect
-		(at 166.37 128.27)
-		(uuid "ee2b5137-e160-40bf-b76c-c24620362cce")
+		(at 196.85 67.31)
+		(uuid "f0959ac5-c9c4-4d62-b7b4-47da9142f1a1")
 	)
 	(wire
 		(pts
-			(xy 240.03 142.24) (xy 240.03 143.51)
+			(xy 81.28 152.4) (xy 90.17 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05f4c06e-0414-4b8d-9ed3-da402db96e87")
+		(uuid "0012cab2-73e7-4ba2-8c36-89b601afba9b")
 	)
 	(wire
 		(pts
-			(xy 64.77 148.59) (xy 68.58 148.59)
+			(xy 250.19 86.36) (xy 255.27 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07446c7d-8253-4198-b9ac-36d7deb9f9d8")
+	)
+	(wire
+		(pts
+			(xy 116.84 99.06) (xy 120.65 99.06)
 		)
 		(stroke
 			(width 0)
@@ -4103,13 +4239,13 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 53.34) (xy 191.77 53.34)
+			(xy 255.27 72.39) (xy 261.62 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "092377f7-b908-458f-b468-8b29d34f989c")
+		(uuid "0bf09ebc-57ce-442c-b0ca-ecee5033d956")
 	)
 	(wire
 		(pts
@@ -4123,17 +4259,27 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 142.24) (xy 234.95 143.51)
+			(xy 88.9 143.51) (xy 90.17 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "129e434d-74d2-44ab-b1aa-08a9387efbda")
+		(uuid "0d2d21fe-45b4-4982-8ff1-390c8aeae00e")
 	)
 	(wire
 		(pts
-			(xy 151.13 82.55) (xy 151.13 97.79)
+			(xy 111.76 146.05) (xy 109.22 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fc759fd-6c59-4d35-9ff3-ffefe0091c22")
+	)
+	(wire
+		(pts
+			(xy 181.61 36.83) (xy 181.61 52.07)
 		)
 		(stroke
 			(width 0)
@@ -4143,17 +4289,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 106.68) (xy 224.79 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15fed5d2-ea6c-4ac5-834c-30d385ad7593")
-	)
-	(wire
-		(pts
-			(xy 76.2 130.81) (xy 76.2 132.08)
+			(xy 128.27 81.28) (xy 128.27 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4173,7 +4309,17 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 142.24) (xy 35.56 146.05)
+			(xy 255.27 76.2) (xy 255.27 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c4c5041-d79b-4f76-81b1-88bb15928367")
+	)
+	(wire
+		(pts
+			(xy 87.63 92.71) (xy 87.63 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4183,23 +4329,13 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 82.55) (xy 160.02 82.55)
+			(xy 181.61 36.83) (xy 190.5 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1e4937eb-483a-49ec-8e10-5ed1969a664e")
-	)
-	(wire
-		(pts
-			(xy 228.6 52.07) (xy 228.6 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20069eaa-4e48-408b-94b1-5534e45f5de9")
 	)
 	(wire
 		(pts
@@ -4213,7 +4349,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 90.17) (xy 182.88 91.44)
+			(xy 213.36 44.45) (xy 213.36 45.72)
 		)
 		(stroke
 			(width 0)
@@ -4223,13 +4359,13 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 52.07) (xy 191.77 53.34)
+			(xy 44.45 152.4) (xy 53.34 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2d271f40-560d-45cd-aa21-5e1a2efddff0")
+		(uuid "2d96dc52-857a-4719-8e3b-01b4ab3f014d")
 	)
 	(wire
 		(pts
@@ -4243,33 +4379,33 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 44.45) (xy 228.6 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33f0a983-907c-41fb-815f-22f82f06f02e")
-	)
-	(wire
-		(pts
-			(xy 250.19 121.92) (xy 255.27 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34dd6046-6708-48ba-be47-5b8635b69632")
-	)
-	(wire
-		(pts
-			(xy 114.3 102.87) (xy 118.11 102.87)
+			(xy 144.78 57.15) (xy 148.59 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "35bec939-0662-4943-af60-8775f0c4ecfb")
+	)
+	(wire
+		(pts
+			(xy 234.95 107.95) (xy 232.41 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35c0b10a-1a1b-40dd-bb2e-69a8a25c59d5")
+	)
+	(wire
+		(pts
+			(xy 196.85 72.39) (xy 199.39 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36598e9a-2cb5-4500-8348-b7c82c07bc64")
 	)
 	(wire
 		(pts
@@ -4283,23 +4419,23 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 111.76) (xy 255.27 110.49)
+			(xy 250.19 91.44) (xy 255.27 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3b69b3f1-c5c6-40c5-8c65-921dfd45ff32")
+		(uuid "3cdb9fc8-51f7-4461-af46-aef38dbfbef7")
 	)
 	(wire
 		(pts
-			(xy 232.41 143.51) (xy 232.41 144.78)
+			(xy 242.57 107.95) (xy 240.03 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3fd52b05-7e9c-40e7-b6e7-4c2982fd458a")
+		(uuid "4313e25f-42ab-43a4-b75e-467fcdfb5d58")
 	)
 	(wire
 		(pts
@@ -4313,13 +4449,23 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 123.19) (xy 261.62 123.19)
+			(xy 69.85 143.51) (xy 73.66 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b4a4df7-1fab-4586-a8fa-bc4d402cbc18")
+		(uuid "47b5ea0c-288e-4320-9798-dc8cc9edf3f8")
+	)
+	(wire
+		(pts
+			(xy 255.27 87.63) (xy 261.62 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ac431ee-c676-4acc-8065-5e240744dd44")
 	)
 	(wire
 		(pts
@@ -4333,6 +4479,26 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 76.2) (xy 255.27 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d38b3de-3377-458c-bcf6-87c98686833d")
+	)
+	(wire
+		(pts
+			(xy 255.27 71.12) (xy 255.27 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de32832-423a-41f5-a31e-164887d3666d")
+	)
+	(wire
+		(pts
 			(xy 74.93 62.23) (xy 52.07 62.23)
 		)
 		(stroke
@@ -4343,7 +4509,37 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 153.67) (xy 48.26 157.48)
+			(xy 29.21 152.4) (xy 44.45 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "533785b9-88b0-478a-a921-3306d2707c13")
+	)
+	(wire
+		(pts
+			(xy 250.19 71.12) (xy 255.27 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5486c92a-0eba-4085-b2f2-86980e488389")
+	)
+	(wire
+		(pts
+			(xy 232.41 106.68) (xy 232.41 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54c47b94-d456-41ce-9450-89900e7d59ef")
+	)
+	(wire
+		(pts
+			(xy 100.33 104.14) (xy 100.33 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4353,57 +4549,27 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 106.68) (xy 255.27 106.68)
+			(xy 53.34 152.4) (xy 81.28 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "585fce58-b64d-477f-ad4e-0c4cf3912b73")
+		(uuid "58c3ff5a-df2a-4950-b031-5eb4b6202aa4")
 	)
 	(wire
 		(pts
-			(xy 201.93 121.92) (xy 224.79 121.92)
+			(xy 255.27 86.36) (xy 255.27 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a6fd55d-81b5-40d7-aee5-cf66549b2df8")
+		(uuid "6180f297-e62d-44a9-8c73-7af919a0dc2c")
 	)
 	(wire
 		(pts
-			(xy 166.37 118.11) (xy 201.93 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ca6aaa5-409b-4cd4-81f9-0c5e87f59af9")
-	)
-	(wire
-		(pts
-			(xy 167.64 53.34) (xy 182.88 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f4d50f7-7897-4c4b-901a-5ac56305a3c6")
-	)
-	(wire
-		(pts
-			(xy 182.88 53.34) (xy 182.88 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6066855f-b290-4f80-bf3d-0955e8ec0839")
-	)
-	(wire
-		(pts
-			(xy 128.27 95.25) (xy 128.27 102.87)
+			(xy 158.75 49.53) (xy 158.75 57.15)
 		)
 		(stroke
 			(width 0)
@@ -4413,7 +4579,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 138.43) (xy 91.44 138.43)
+			(xy 140.97 88.9) (xy 143.51 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4433,16 +4599,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 142.24) (xy 232.41 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67e49656-0592-40ae-9987-ecf15178722b")
-	)
-	(wire
-		(pts
 			(xy 55.88 72.39) (xy 62.23 72.39)
 		)
 		(stroke
@@ -4453,7 +4609,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 82.55) (xy 171.45 82.55)
+			(xy 190.5 36.83) (xy 201.93 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4463,33 +4619,23 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 127) (xy 198.12 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d97866a-b6d1-4117-ae09-db66a3ca0425")
-	)
-	(wire
-		(pts
-			(xy 228.6 44.45) (xy 236.22 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6dbf1a7a-e580-4046-bddb-fc06a89b30d5")
-	)
-	(wire
-		(pts
-			(xy 160.02 90.17) (xy 160.02 91.44)
+			(xy 190.5 44.45) (xy 190.5 45.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6f8bd0bc-a8ce-4850-aa13-1ee9a9ff28fe")
+	)
+	(wire
+		(pts
+			(xy 196.85 82.55) (xy 199.39 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "715d01af-66cd-4d19-8492-098aca2cc665")
 	)
 	(wire
 		(pts
@@ -4503,23 +4649,13 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 105.41) (xy 168.91 105.41)
+			(xy 196.85 59.69) (xy 199.39 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "72bc92d7-5edc-495b-ba7e-8466de77b7f0")
-	)
-	(wire
-		(pts
-			(xy 255.27 107.95) (xy 261.62 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72cf9c19-27f6-4a0b-8ce0-2cd09b014afc")
 	)
 	(wire
 		(pts
@@ -4533,73 +4669,43 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 127) (xy 198.12 120.65)
+			(xy 97.79 143.51) (xy 100.33 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "79c71b6f-e7fb-472f-a639-d2ba03ba4ff3")
+		(uuid "75eca49b-b9ec-4ac6-a91a-ef6d5d7d0721")
 	)
 	(wire
 		(pts
-			(xy 242.57 142.24) (xy 242.57 143.51)
+			(xy 53.34 143.51) (xy 69.85 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7d13f0a0-ecfa-4abb-817e-3c0c6c3f9564")
+		(uuid "77bec048-fb63-4f58-b21a-56fd4e05b505")
 	)
 	(wire
 		(pts
-			(xy 255.27 121.92) (xy 255.27 123.19)
+			(xy 52.07 143.51) (xy 53.34 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7e4f9e36-be1f-4991-9f89-af604d5d25dc")
+		(uuid "7ca34e46-1de9-4c83-ade4-6690511f9778")
 	)
 	(wire
 		(pts
-			(xy 114.3 105.41) (xy 114.3 102.87)
+			(xy 144.78 59.69) (xy 144.78 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "80fce11e-9c17-4f58-9bba-cf2f929d7262")
-	)
-	(wire
-		(pts
-			(xy 242.57 143.51) (xy 240.03 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8143fec0-178e-4d85-afc3-15aaa831da29")
-	)
-	(wire
-		(pts
-			(xy 167.64 52.07) (xy 167.64 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81a4cb0f-64dd-4b02-a3a9-6216647e73d8")
-	)
-	(wire
-		(pts
-			(xy 236.22 44.45) (xy 238.76 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81ff2001-3968-4ae5-9f31-3b3b182d7810")
 	)
 	(wire
 		(pts
@@ -4613,17 +4719,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 118.11) (xy 201.93 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82893fac-fdcd-406f-a8d2-43a150e44414")
-	)
-	(wire
-		(pts
-			(xy 76.2 132.08) (xy 76.2 133.35)
+			(xy 128.27 82.55) (xy 128.27 83.82)
 		)
 		(stroke
 			(width 0)
@@ -4633,27 +4729,37 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 44.45) (xy 250.19 44.45)
+			(xy 222.25 71.12) (xy 224.79 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8606cad9-082f-414f-9c4a-5747d6a4c18e")
+		(uuid "872f7c72-5b4d-4058-89d4-0e7d8d917b4d")
 	)
 	(wire
 		(pts
-			(xy 191.77 53.34) (xy 219.71 53.34)
+			(xy 90.17 143.51) (xy 97.79 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "891249de-c6e9-4ae8-8015-621c21477939")
+		(uuid "8860dfd4-e526-421f-9371-a362ce1887b6")
 	)
 	(wire
 		(pts
-			(xy 171.45 82.55) (xy 182.88 82.55)
+			(xy 90.17 151.13) (xy 90.17 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "894acd9e-0232-4af5-865b-ea57e5bcff48")
+	)
+	(wire
+		(pts
+			(xy 201.93 36.83) (xy 213.36 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4663,7 +4769,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 133.35) (xy 78.74 132.08)
+			(xy 130.81 83.82) (xy 130.81 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4673,37 +4779,17 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 53.34) (xy 247.65 57.15)
+			(xy 90.17 152.4) (xy 109.22 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "90737f57-95f6-4707-aa81-6cd6306e9bfb")
+		(uuid "8ebd147d-0f17-43cd-9752-38640fa91012")
 	)
 	(wire
 		(pts
-			(xy 166.37 113.03) (xy 194.31 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9093f587-9988-4c79-8754-1ac226780631")
-	)
-	(wire
-		(pts
-			(xy 208.28 44.45) (xy 212.09 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93263294-c458-4526-86b5-4c97a322dfc7")
-	)
-	(wire
-		(pts
-			(xy 88.9 140.97) (xy 91.44 140.97)
+			(xy 140.97 91.44) (xy 143.51 91.44)
 		)
 		(stroke
 			(width 0)
@@ -4713,7 +4799,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 142.24) (xy 48.26 146.05)
+			(xy 100.33 92.71) (xy 100.33 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4733,37 +4819,57 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 111.76) (xy 255.27 111.76)
+			(xy 110.49 143.51) (xy 111.76 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a05772b0-92c9-4075-b950-774518f100aa")
+		(uuid "9c5df781-0db8-49be-8fdf-596d1192b5d2")
 	)
 	(wire
 		(pts
-			(xy 198.12 120.65) (xy 166.37 120.65)
+			(xy 222.25 86.36) (xy 224.79 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5127539-40ae-4f08-b345-108f011a3dfc")
+		(uuid "9dfa9da1-9a29-4ee3-ad95-12a7d1e4192e")
 	)
 	(wire
 		(pts
-			(xy 255.27 110.49) (xy 261.62 110.49)
+			(xy 242.57 106.68) (xy 242.57 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a90001bc-678f-4fc6-93f9-e00658dfa57a")
+		(uuid "9f50cc81-a2a9-4856-afa5-c2d08f631199")
 	)
 	(wire
 		(pts
-			(xy 128.27 87.63) (xy 128.27 82.55)
+			(xy 240.03 107.95) (xy 234.95 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1ebd9f6-d29f-45f3-a797-8773eb92b013")
+	)
+	(wire
+		(pts
+			(xy 232.41 107.95) (xy 232.41 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2f25b95-43bc-4467-a443-41deaea133cf")
+	)
+	(wire
+		(pts
+			(xy 158.75 41.91) (xy 158.75 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4773,27 +4879,17 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 143.51) (xy 234.95 143.51)
+			(xy 255.27 91.44) (xy 255.27 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac78058f-ac27-4ab2-956d-1ab34b973e51")
+		(uuid "ab66151b-cd16-444e-a909-8754da6bdabf")
 	)
 	(wire
 		(pts
-			(xy 191.77 44.45) (xy 208.28 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad96b04d-3d0f-460a-afc3-1636779ec445")
-	)
-	(wire
-		(pts
-			(xy 166.37 110.49) (xy 168.91 110.49)
+			(xy 196.85 64.77) (xy 199.39 64.77)
 		)
 		(stroke
 			(width 0)
@@ -4803,23 +4899,33 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 102.87) (xy 135.89 102.87)
+			(xy 81.28 151.13) (xy 81.28 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aeeaac10-f51e-4f93-a5d0-c2eb79660925")
+	)
+	(wire
+		(pts
+			(xy 109.22 146.05) (xy 109.22 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af0017a6-0bf0-457a-a326-25839cb00878")
+	)
+	(wire
+		(pts
+			(xy 158.75 57.15) (xy 166.37 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b26ed0aa-5687-4b91-84af-3360294a66ad")
-	)
-	(wire
-		(pts
-			(xy 194.31 113.03) (xy 194.31 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b32d236a-25f7-4e32-902a-417444a7cee9")
 	)
 	(wire
 		(pts
@@ -4833,7 +4939,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 146.05) (xy 68.58 146.05)
+			(xy 116.84 96.52) (xy 120.65 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4843,23 +4949,23 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 46.99) (xy 247.65 46.99)
+			(xy 29.21 143.51) (xy 36.83 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bde9e7aa-002b-40bd-9d52-8755442d32e1")
+		(uuid "be2efdb6-6547-4e17-a2be-ed64d8509b06")
 	)
 	(wire
 		(pts
-			(xy 234.95 143.51) (xy 232.41 143.51)
+			(xy 240.03 106.68) (xy 240.03 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "be880456-c9af-4c79-a72c-6126b58426d7")
+		(uuid "beb5fadd-976b-416b-b8a2-58280f607268")
 	)
 	(wire
 		(pts
@@ -4873,7 +4979,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 132.08) (xy 76.2 132.08)
+			(xy 130.81 82.55) (xy 128.27 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4893,57 +4999,27 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 44.45) (xy 191.77 44.45)
+			(xy 255.27 90.17) (xy 261.62 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c07ca6c5-1b1d-4311-9198-77475cbdecc7")
+		(uuid "c5b7d774-bc20-46d3-adcb-527af852cc8e")
 	)
 	(wire
 		(pts
-			(xy 250.19 127) (xy 255.27 127)
+			(xy 100.33 140.97) (xy 100.33 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2114522-c997-4b65-963e-49b00e1123de")
+		(uuid "c6996b4c-503d-4106-a2a2-805fddd3c5ef")
 	)
 	(wire
 		(pts
-			(xy 198.12 115.57) (xy 198.12 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c50191ae-2fee-4f9c-a585-f90aedc6aa3c")
-	)
-	(wire
-		(pts
-			(xy 228.6 53.34) (xy 247.65 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c53937f2-8d0b-49e7-b258-5c66ff6333a3")
-	)
-	(wire
-		(pts
-			(xy 255.27 127) (xy 255.27 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5bc86e3-a79d-4d4a-bb91-bf0d84e3c34b")
-	)
-	(wire
-		(pts
-			(xy 35.56 153.67) (xy 35.56 157.48)
+			(xy 87.63 104.14) (xy 87.63 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4963,13 +5039,23 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 115.57) (xy 198.12 115.57)
+			(xy 222.25 91.44) (xy 224.79 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d0f0cd77-fa56-4981-bcda-8d3ca9f53794")
+		(uuid "d0939f4f-c149-4b7b-8908-cc4ea8bd9c50")
+	)
+	(wire
+		(pts
+			(xy 222.25 76.2) (xy 224.79 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1c57588-7b5e-4604-834c-b1c50f411453")
 	)
 	(wire
 		(pts
@@ -4983,7 +5069,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 82.55) (xy 151.13 82.55)
+			(xy 158.75 36.83) (xy 181.61 36.83)
 		)
 		(stroke
 			(width 0)
@@ -4993,7 +5079,17 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 91.44) (xy 182.88 91.44)
+			(xy 196.85 74.93) (xy 199.39 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5c4847f-0254-438e-9eb3-7f9761062a5c")
+	)
+	(wire
+		(pts
+			(xy 201.93 45.72) (xy 213.36 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5013,27 +5109,17 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 46.99) (xy 247.65 53.34)
+			(xy 255.27 74.93) (xy 261.62 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e7e79644-68a1-499e-94d5-09aeefcc82f6")
+		(uuid "e0ed7a17-d689-4aba-8d32-a7893ff34202")
 	)
 	(wire
 		(pts
-			(xy 167.64 44.45) (xy 175.26 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9208828-6a24-468e-8dde-4109215c5595")
-	)
-	(wire
-		(pts
-			(xy 171.45 90.17) (xy 171.45 91.44)
+			(xy 201.93 44.45) (xy 201.93 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5043,27 +5129,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 125.73) (xy 261.62 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eaf40601-1195-4558-ba61-9c40089403c9")
-	)
-	(wire
-		(pts
-			(xy 255.27 106.68) (xy 255.27 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eafc2694-b769-490b-9eae-ff2a0b7c1867")
-	)
-	(wire
-		(pts
-			(xy 160.02 91.44) (xy 171.45 91.44)
+			(xy 190.5 45.72) (xy 201.93 45.72)
 		)
 		(stroke
 			(width 0)
@@ -5073,33 +5139,53 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 111.76) (xy 224.79 111.76)
+			(xy 29.21 151.13) (xy 29.21 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ecdfd1d5-10f7-4851-b202-eebf78ed3966")
+		(uuid "ed0d6616-acfa-4d09-b241-a257a9e17ee7")
 	)
 	(wire
 		(pts
-			(xy 219.71 53.34) (xy 228.6 53.34)
+			(xy 53.34 151.13) (xy 53.34 152.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f6338661-cac9-4f8d-8f82-88d4c99f0332")
+		(uuid "f7940eb2-c8f9-4ac7-9dde-961bd5d3412b")
 	)
 	(wire
 		(pts
-			(xy 219.71 52.07) (xy 219.71 53.34)
+			(xy 234.95 106.68) (xy 234.95 107.95)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f8769425-4446-4d79-b899-d709d64ed443")
+		(uuid "f83b9726-acda-4392-8fd2-dbe549e1d951")
+	)
+	(wire
+		(pts
+			(xy 109.22 152.4) (xy 109.22 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f873844b-18bc-4a6c-8366-5a750c9cbf57")
+	)
+	(wire
+		(pts
+			(xy 44.45 152.4) (xy 44.45 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb792418-f062-4857-95e0-fcd2d3201914")
 	)
 	(wire
 		(pts
@@ -5111,9 +5197,19 @@
 		)
 		(uuid "fc10f7dd-98a3-4249-91e4-56ee3d9f1571")
 	)
+	(wire
+		(pts
+			(xy 196.85 77.47) (xy 199.39 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffb6c6ec-8c41-480c-9bd5-d402e34e7795")
+	)
 	(global_label "RX"
 		(shape input)
-		(at 168.91 105.41 0)
+		(at 199.39 59.69 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5123,7 +5219,7 @@
 		)
 		(uuid "07fe5bb2-f040-4a05-aede-aa03eac76217")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 174.3747 105.41 0)
+			(at 204.8547 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5135,7 +5231,7 @@
 	)
 	(global_label "RX"
 		(shape input)
-		(at 91.44 138.43 0)
+		(at 143.51 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5145,12 +5241,34 @@
 		)
 		(uuid "1953e048-8673-4205-870b-03ccb464ba72")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.9047 138.43 0)
+			(at 148.9747 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "1A"
+		(shape input)
+		(at 222.25 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4114a9a4-b4ee-4a9d-bece-bafe534d299b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 216.9667 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -5199,9 +5317,31 @@
 			)
 		)
 	)
+	(global_label "3A"
+		(shape input)
+		(at 199.39 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "562b9956-dd9a-45a6-88ca-ec9fbbd4ef46")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 204.6733 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TX"
 		(shape input)
-		(at 168.91 110.49 0)
+		(at 199.39 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5211,7 +5351,7 @@
 		)
 		(uuid "83921b5d-51bc-4336-99e8-d74cd3cec37a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 174.0723 110.49 0)
+			(at 204.5523 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5223,7 +5363,7 @@
 	)
 	(global_label "D+"
 		(shape input)
-		(at 64.77 146.05 180)
+		(at 116.84 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5233,7 +5373,29 @@
 		)
 		(uuid "a09fb0ed-2e87-4fcf-9f68-213822288850")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.9424 146.05 0)
+			(at 111.0124 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "2A"
+		(shape input)
+		(at 222.25 76.2 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a8d6ec5a-8f82-4c72-9875-54c3d8be9869")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 216.9667 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5245,7 +5407,7 @@
 	)
 	(global_label "D-"
 		(shape input)
-		(at 64.77 148.59 180)
+		(at 116.84 99.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5255,7 +5417,95 @@
 		)
 		(uuid "ad749280-42f6-4152-836b-fd8347b4d7fd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.9424 148.59 0)
+			(at 111.0124 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "4A"
+		(shape input)
+		(at 199.39 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b2d06812-9412-485b-b338-8e94e52515fa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 204.6733 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "1A"
+		(shape input)
+		(at 199.39 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b3835e75-9af6-4352-b15a-0fdbff1172f5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 204.6733 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "3A"
+		(shape input)
+		(at 222.25 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "be902cdb-624c-4540-96a7-07557c336787")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 216.9667 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "4A"
+		(shape input)
+		(at 222.25 91.44 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "beac3d6e-4a6e-4169-9822-f31f6bfbfa1c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 216.9667 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5267,7 +5517,7 @@
 	)
 	(global_label "TX"
 		(shape input)
-		(at 91.44 140.97 0)
+		(at 143.51 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5277,7 +5527,29 @@
 		)
 		(uuid "c4bdf8d8-ce9b-4ae6-a0fa-8081d9a82eb9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.6023 140.97 0)
+			(at 148.6723 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "2A"
+		(shape input)
+		(at 199.39 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7423132-5fe1-4824-a75b-d5d0692a2f52")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 204.6733 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5288,89 +5560,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AMS1117-3.3")
-		(at 182.88 44.45 0)
-		(mirror y)
+		(lib_id "Mechanical:MountingHole")
+		(at 152.4 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "051444be-10f9-46e9-bbd4-45c693a54bd7")
-		(property "Reference" "U4"
-			(at 182.88 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AMS1117-3.3"
-			(at 182.88 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 182.88 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
-			(at 180.34 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
-			(at 182.88 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d4dd0313-cb60-4be8-898a-e936e3919d0f")
-		)
-		(pin "3"
-			(uuid "b29c292c-254d-4c36-9adf-8e35b52e037c")
-		)
-		(pin "2"
-			(uuid "3afa4299-ebcd-4df0-9847-5b72286fe9f3")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 191.77 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "08979f26-6158-43f8-ab70-86fe2286051f")
-		(property "Reference" "C9"
-			(at 195.58 46.1009 0)
+		(uuid "04905bfb-90eb-45ec-8918-7eec76c2aeb1")
+		(property "Reference" "H1"
+			(at 154.94 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5378,8 +5578,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 195.58 48.6409 0)
+		(property "Value" "MountingHole"
+			(at 154.94 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5387,8 +5587,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 192.7352 52.07 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5397,7 +5597,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 48.26 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5405,25 +5605,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor"
-			(at 191.77 48.26 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
-		)
-		(pin "2"
-			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C9")
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -5431,7 +5625,7 @@
 	)
 	(symbol
 		(lib_id "Interface_USB:CH340C")
-		(at 78.74 148.59 0)
+		(at 130.81 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5440,7 +5634,7 @@
 		(fields_autoplaced yes)
 		(uuid "0a796308-2aad-43e6-b8b0-8299c865ba0d")
 		(property "Reference" "U2"
-			(at 80.9341 163.83 0)
+			(at 133.0041 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5449,7 +5643,7 @@
 			)
 		)
 		(property "Value" "CH340C"
-			(at 80.9341 166.37 0)
+			(at 133.0041 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5458,7 +5652,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
-			(at 80.01 162.56 0)
+			(at 132.08 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5468,7 +5662,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.lcsc.com/szlcsc/Jiangsu-Qin-Heng-CH340C_C84681.pdf"
-			(at 69.85 128.27 0)
+			(at 121.92 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5477,7 +5671,7 @@
 			)
 		)
 		(property "Description" "USB serial converter, UART, SOIC-16"
-			(at 78.74 148.59 0)
+			(at 130.81 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5543,17 +5737,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 167.64 44.45 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 153.67 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "12bc8d4d-9ba4-4827-b351-5f2285c1edf2")
-		(property "Reference" "#PWR019"
-			(at 167.64 48.26 0)
+		(uuid "0b65323b-342d-4ed5-a348-cc1a2c640a76")
+		(property "Reference" "H2"
+			(at 156.21 176.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 156.21 179.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 153.67 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5561,16 +5773,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 167.64 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 44.45 0)
+		(property "Datasheet" "~"
+			(at 153.67 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5578,31 +5782,19 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 167.64 44.45 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 153.67 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 167.64 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c55c5f29-b36c-4684-b2f5-fa3ac4f22048")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR019")
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -5750,7 +5942,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 35.56 157.48 0)
+		(at 87.63 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5758,8 +5950,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1cab3239-64c4-4d3c-b78a-fa800af297d2")
-		(property "Reference" "#PWR03"
-			(at 35.56 163.83 0)
+		(property "Reference" "#PWR010"
+			(at 87.63 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5768,7 +5960,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 162.56 0)
+			(at 87.63 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5776,7 +5968,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 157.48 0)
+			(at 87.63 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5785,7 +5977,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 157.48 0)
+			(at 87.63 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5794,7 +5986,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.56 157.48 0)
+			(at 87.63 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5808,7 +6000,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR03")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5816,7 +6008,7 @@
 	)
 	(symbol
 		(lib_id "RF_Module:ESP-12F")
-		(at 151.13 118.11 0)
+		(at 181.61 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5825,7 +6017,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e000456-fd9d-4876-83e7-d67c3b34a0f3")
 		(property "Reference" "U3"
-			(at 153.3241 95.25 0)
+			(at 183.8041 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5834,7 +6026,7 @@
 			)
 		)
 		(property "Value" "ESP-12F"
-			(at 153.3241 97.79 0)
+			(at 183.8041 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5843,7 +6035,7 @@
 			)
 		)
 		(property "Footprint" "RF_Module:ESP-12E"
-			(at 151.13 118.11 0)
+			(at 181.61 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5852,7 +6044,7 @@
 			)
 		)
 		(property "Datasheet" "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf"
-			(at 142.24 115.57 0)
+			(at 172.72 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5861,7 +6053,7 @@
 			)
 		)
 		(property "Description" "802.11 b/g/n Wi-Fi Module"
-			(at 151.13 118.11 0)
+			(at 181.61 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5945,26 +6137,26 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 171.45 86.36 0)
+		(lib_id "power:+5V")
+		(at 224.79 81.28 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "25116df6-8c31-4033-b654-20ef20bc47ac")
-		(property "Reference" "C7"
-			(at 175.26 85.0899 0)
+		(uuid "1f629b2d-aec8-418e-aaf1-16b19bfdf83a")
+		(property "Reference" "#PWR024"
+			(at 228.6 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "1u"
-			(at 175.26 87.6299 0)
+		(property "Value" "+5V"
+			(at 220.98 81.2799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5973,7 +6165,74 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.4152 90.17 0)
+			(at 224.79 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 224.79 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b50efc53-ffc1-4895-ae21-59a4fa3e6100")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 266.7 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2245c2cc-e0c2-4c23-881e-eb2e4d2eecbd")
+		(property "Reference" "J3"
+			(at 267.97 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MOTOR1"
+			(at 267.97 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 266.7 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5982,7 +6241,77 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.45 86.36 0)
+			(at 266.7 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 266.7 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2451b5d0-c239-4db8-a122-cf09809ffda2")
+		)
+		(pin "2"
+			(uuid "2f7e553d-a3f7-4378-a95e-4074db2d2f4a")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 201.93 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25116df6-8c31-4033-b654-20ef20bc47ac")
+		(property "Reference" "C6"
+			(at 205.74 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 205.74 41.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 202.8952 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5991,7 +6320,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 171.45 86.36 0)
+			(at 201.93 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6008,7 +6337,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C7")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -6087,7 +6416,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 35.56 142.24 0)
+		(at 87.63 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6095,8 +6424,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a8d7beb-6766-4af4-abb0-6ffc80df7dad")
-		(property "Reference" "#PWR02"
-			(at 35.56 146.05 0)
+		(property "Reference" "#PWR09"
+			(at 87.63 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6105,7 +6434,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 35.56 137.16 0)
+			(at 87.63 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6113,7 +6442,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 142.24 0)
+			(at 87.63 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6122,7 +6451,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 142.24 0)
+			(at 87.63 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6131,7 +6460,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 35.56 142.24 0)
+			(at 87.63 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6145,7 +6474,77 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR02")
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 90.17 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ac40912-9823-4cb6-9ddd-082dd209a0d1")
+		(property "Reference" "C10"
+			(at 93.98 145.1609 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100u"
+			(at 93.98 147.7009 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 91.1352 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 90.17 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5720e5e9-527c-4e13-8a11-6fc877de61ed")
+		)
+		(pin "2"
+			(uuid "217769f9-f89d-444f-9d75-e4b6989a1311")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -6161,7 +6560,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c0a185b-befd-4618-be3f-867b497afa4c")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR07"
 			(at 83.82 39.37 0)
 			(effects
 				(font
@@ -6211,24 +6610,24 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR013")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 255.27 44.45 0)
+		(lib_id "Driver_Motor:L293D")
+		(at 237.49 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2df150f9-6474-4aa1-a3e3-ce73a6a2ee21")
-		(property "Reference" "J2"
-			(at 256.54 44.4499 0)
+		(uuid "356565fb-f792-4e56-9883-cc76daf7a1f6")
+		(property "Reference" "U6"
+			(at 242.2241 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6236,8 +6635,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "9v BATTERY"
-			(at 256.54 46.9899 0)
+		(property "Value" "L293D"
+			(at 242.2241 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6245,8 +6644,18 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 255.27 44.45 0)
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+			(at 243.84 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/l293.pdf"
+			(at 229.87 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6254,8 +6663,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 255.27 44.45 0)
+		(property "Description" "Quadruple Half-H Drivers"
+			(at 237.49 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6263,42 +6672,75 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 255.27 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a8c26e8e-0ca2-4782-8f49-03be75b095da")
+		(pin "13"
+			(uuid "16d46130-e54f-4f36-859b-1b0334a283c5")
 		)
 		(pin "1"
-			(uuid "1ce4ed7d-c221-4237-950c-8c5fe38c4c8d")
+			(uuid "dc8819f5-df64-4f14-aaec-3da9fd8340f3")
+		)
+		(pin "14"
+			(uuid "b25d2a79-bd79-4156-9766-7b74c46aae8d")
+		)
+		(pin "7"
+			(uuid "e58e0728-ac82-454a-8bc6-92183c12c8f8")
+		)
+		(pin "9"
+			(uuid "0faf6f4d-4dfa-4133-97d0-0c64eb6c63aa")
+		)
+		(pin "15"
+			(uuid "cd65387d-7816-4f48-a624-78973752d123")
+		)
+		(pin "2"
+			(uuid "7d9b1de6-9c61-4d15-b258-c47c57cbe15f")
+		)
+		(pin "11"
+			(uuid "7e82d21d-9bca-4631-863a-02ca8dc1fa44")
+		)
+		(pin "6"
+			(uuid "f79a1f41-8434-4956-b274-dfb83c225851")
+		)
+		(pin "3"
+			(uuid "516eed97-44aa-4019-83c4-07d80fd76d0d")
+		)
+		(pin "4"
+			(uuid "47ad5693-30c4-48c5-beaf-938450fe54b3")
+		)
+		(pin "8"
+			(uuid "62fe6c8a-5720-483c-ba9e-781e7a73dfe4")
+		)
+		(pin "12"
+			(uuid "756790e9-c92a-463e-9323-197681544688")
+		)
+		(pin "16"
+			(uuid "e78cf85a-16d9-44a2-8a06-df594c5eed2b")
+		)
+		(pin "5"
+			(uuid "6665c7ea-562b-4e17-a97c-e6eecf615657")
+		)
+		(pin "10"
+			(uuid "5aefd6b0-d4b2-45a5-ad14-52ec84022296")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "J2")
+					(reference "U6")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 247.65 57.15 0)
+		(lib_id "power:+5V")
+		(at 69.85 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "389b0b1a-44d2-46bf-9560-879f4e0e043b")
-		(property "Reference" "#PWR028"
-			(at 247.65 63.5 0)
+		(uuid "37bf0f5b-f1a9-4877-8998-b39259e765af")
+		(property "Reference" "#PWR029"
+			(at 69.85 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6306,8 +6748,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 247.65 62.23 0)
+		(property "Value" "+5V"
+			(at 69.85 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6315,7 +6757,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 247.65 57.15 0)
+			(at 69.85 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6324,7 +6766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 57.15 0)
+			(at 69.85 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6332,75 +6774,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 247.65 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f90cd1c0-7dc2-4fb0-9052-d3b712eff2bf")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:L7805")
-		(at 219.71 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3c619465-36ec-49d3-87b5-5cc5bafcd9ec")
-		(property "Reference" "U5"
-			(at 219.71 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "L7805"
-			(at 219.71 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
-			(at 220.345 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
-			(at 219.71 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
-			(at 219.71 44.45 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 69.85 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6409,88 +6784,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c798dc41-0e6a-4824-9338-3bb3c9c92a77")
-		)
-		(pin "2"
-			(uuid "73ce5942-7f09-40ea-9a2e-feb762dd0c65")
-		)
-		(pin "3"
-			(uuid "6997a05e-b478-462d-ad73-e73f5ac98026")
+			(uuid "c0d9ed13-f764-4842-b039-51166385d3f6")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 228.6 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3ddf0fbf-b4cc-4876-86d9-bdc8955c375e")
-		(property "Reference" "C10"
-			(at 232.41 46.1009 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100u"
-			(at 232.41 48.6409 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.5652 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 228.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 228.6 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
-		)
-		(pin "2"
-			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C10")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -6498,7 +6797,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 123.19 102.87 0)
+		(at 153.67 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6507,15 +6806,15 @@
 		(fields_autoplaced yes)
 		(uuid "45eb6c36-2d85-4496-ade0-3d427382918f")
 		(property "Reference" "SW1"
-			(at 123.19 95.25 0)
+			(at 153.67 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "SW_Push"
-			(at 123.19 97.79 0)
+		(property "Value" "RESET"
+			(at 153.67 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6523,7 +6822,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 123.19 97.79 0)
+			(at 153.67 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6532,7 +6831,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 123.19 97.79 0)
+			(at 153.67 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6541,7 +6840,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 123.19 102.87 0)
+			(at 153.67 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6565,17 +6864,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 76.2 130.81 0)
+		(lib_id "power:+5V")
+		(at 234.95 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5b216b31-5429-4867-8b68-c2f6a7308e1c")
-		(property "Reference" "#PWR011"
-			(at 76.2 134.62 0)
+		(uuid "47cb11c1-fa05-46ca-aded-6a9094e8da0c")
+		(property "Reference" "#PWR027"
+			(at 234.95 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6583,8 +6882,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 76.2 125.73 0)
+		(property "Value" "+5V"
+			(at 234.95 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6592,7 +6891,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 130.81 0)
+			(at 234.95 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6601,7 +6900,282 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 130.81 0)
+			(at 234.95 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 234.95 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d3f5ca3-7102-42d9-b550-9fa355db2877")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 116.84 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4936e66c-e560-4ecc-a29e-b96f67d53e8f")
+		(property "Reference" "J2"
+			(at 118.11 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "9v BATTERY"
+			(at 118.11 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 116.84 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 116.84 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b22001e2-7444-474e-9251-7635d9667c02")
+		)
+		(pin "1"
+			(uuid "dd6919bd-c216-4b3d-9eff-8e09eef4b354")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:AMS1117-3.3")
+		(at 44.45 143.51 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b4f382a-84e4-4026-8a5e-ceb49b91242a")
+		(property "Reference" "U4"
+			(at 44.45 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AMS1117-3.3"
+			(at 44.45 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 44.45 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+			(at 41.91 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 44.45 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6218e27e-6a19-497b-bdef-cb38cf3296b3")
+		)
+		(pin "3"
+			(uuid "66d841c6-3268-4425-9cef-0eeb8d40de1e")
+		)
+		(pin "2"
+			(uuid "829a3bf5-5f93-463b-85ff-d20a3665e5d1")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 224.79 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b6ad912-1d9d-4a78-8715-dc221d37f76a")
+		(property "Reference" "#PWR025"
+			(at 228.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 220.98 96.5199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 224.79 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c5e37c41-67a4-4064-a6b8-40b24e2290dd")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 128.27 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b216b31-5429-4867-8b68-c2f6a7308e1c")
+		(property "Reference" "#PWR013"
+			(at 128.27 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 128.27 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6610,7 +7184,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 76.2 130.81 0)
+			(at 128.27 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6624,7 +7198,143 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR011")
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 232.41 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cf981e0-31da-41ac-861a-d6871bee03f2")
+		(property "Reference" "#PWR026"
+			(at 232.41 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 232.41 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 232.41 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a2e56db-82a8-4579-8c74-f9302f117386")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 87.63 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60d6206e-3dab-4425-87fe-e5a873908bfc")
+		(property "Reference" "C3"
+			(at 91.44 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 91.44 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 88.5952 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 87.63 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7eca9172-09d1-4d99-8093-49f89802f9df")
+		)
+		(pin "2"
+			(uuid "74404d83-eac0-472e-88e6-076b39d601d5")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -6632,16 +7342,16 @@
 	)
 	(symbol
 		(lib_id "power:+9V")
-		(at 240.03 96.52 0)
+		(at 97.79 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5f61ebd2-d6cc-4460-add9-836d04b8fcba")
-		(property "Reference" "#PWR027"
-			(at 240.03 100.33 0)
+		(uuid "6a5eaed2-05f6-4c03-8236-ad62353a7e41")
+		(property "Reference" "#PWR030"
+			(at 97.79 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6650,7 +7360,7 @@
 			)
 		)
 		(property "Value" "+9V"
-			(at 240.03 91.44 0)
+			(at 97.79 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6658,7 +7368,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 240.03 96.52 0)
+			(at 97.79 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6667,7 +7377,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 96.52 0)
+			(at 97.79 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6676,7 +7386,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+9V\""
-			(at 240.03 96.52 0)
+			(at 97.79 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6685,257 +7395,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "0b043e95-e4a8-4214-94f2-69c6f8d43fa4")
+			(uuid "d6187056-487d-4e0c-95cd-689464d21a49")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR027")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 35.56 149.86 0)
+		(lib_id "power:+9V")
+		(at 240.03 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "60d6206e-3dab-4425-87fe-e5a873908bfc")
-		(property "Reference" "C1"
-			(at 39.37 148.5899 0)
+		(uuid "6b1df28d-6741-4fcd-b0ed-2cb601190c74")
+		(property "Reference" "#PWR028"
+			(at 240.03 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "10u"
-			(at 39.37 151.1299 0)
+		(property "Value" "+9V"
+			(at 240.03 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 36.5252 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 35.56 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 35.56 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7eca9172-09d1-4d99-8093-49f89802f9df")
-		)
-		(pin "2"
-			(uuid "74404d83-eac0-472e-88e6-076b39d601d5")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 167.64 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6ba3fd83-e88c-42c9-aade-776afcf756cd")
-		(property "Reference" "C6"
-			(at 171.45 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 171.45 49.5299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.6052 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 167.64 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 167.64 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "15331dfd-f00d-4907-b501-fd9e367f8f8f")
-		)
-		(pin "2"
-			(uuid "93c7366b-e404-40c4-8bc5-0f1695ed5b4b")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 48.26 149.86 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6d8e46ab-98ec-4a6f-9f15-5895ee3bd706")
-		(property "Reference" "C2"
-			(at 52.07 148.5899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 52.07 151.1299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.2252 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 48.26 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 48.26 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7eca9172-09d1-4d99-8093-49f89802f9df")
-		)
-		(pin "2"
-			(uuid "74404d83-eac0-472e-88e6-076b39d601d5")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 224.79 132.08 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "728b8b77-e219-4634-b9fd-c974d23de8bc")
-		(property "Reference" "#PWR023"
-			(at 228.6 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 220.98 132.0799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 132.08 0)
+			(at 240.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6944,7 +7443,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 132.08 0)
+			(at 240.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6952,8 +7451,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 224.79 132.08 0)
+		(property "Description" "Power symbol creates a global label with name \"+9V\""
+			(at 240.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6962,12 +7461,146 @@
 			)
 		)
 		(pin "1"
-			(uuid "0af0a0bb-5172-4f4b-ba45-c496dd276501")
+			(uuid "fd72c1c0-83f1-4073-9c6f-cf0ecb582591")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR023")
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 170.18 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6beb2ade-ca8f-466c-a98a-a001994b2e31")
+		(property "Reference" "H4"
+			(at 172.72 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 172.72 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 170.18 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 170.18 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 100.33 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6d8e46ab-98ec-4a6f-9f15-5895ee3bd706")
+		(property "Reference" "C4"
+			(at 104.14 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 104.14 101.5999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 101.2952 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7eca9172-09d1-4d99-8093-49f89802f9e0")
+		)
+		(pin "2"
+			(uuid "74404d83-eac0-472e-88e6-076b39d601d6")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -6975,7 +7608,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 151.13 82.55 0)
+		(at 181.61 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6983,8 +7616,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "781086e7-bd03-4cef-8746-1b3f4715fcc9")
-		(property "Reference" "#PWR017"
-			(at 151.13 86.36 0)
+		(property "Reference" "#PWR020"
+			(at 181.61 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6993,7 +7626,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 151.13 77.47 0)
+			(at 181.61 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7001,7 +7634,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 82.55 0)
+			(at 181.61 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7010,7 +7643,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 82.55 0)
+			(at 181.61 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7019,7 +7652,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 151.13 82.55 0)
+			(at 181.61 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7033,7 +7666,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR017")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7065,7 +7698,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11"
 			(at 40.64 69.85 0)
 			(effects
 				(font
@@ -7153,8 +7786,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:L7805")
+		(at 81.28 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c13f333-56a1-470e-9412-24a652a78618")
+		(property "Reference" "U5"
+			(at 81.28 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L7805"
+			(at 81.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-2"
+			(at 81.915 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
+			(at 81.28 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
+			(at 81.28 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2272a2b3-424d-4cce-b769-25fb29dbc1ed")
+		)
+		(pin "2"
+			(uuid "24e24165-ce09-4cc3-b1f0-9e621f56e8d9")
+		)
+		(pin "3"
+			(uuid "d442869f-d60b-4861-9b54-4bd55bfaf1fc")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 78.74 163.83 0)
+		(at 130.81 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7162,8 +7868,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e980a5f-0e7d-4df2-a4da-084dbec264df")
-		(property "Reference" "#PWR012"
-			(at 78.74 170.18 0)
+		(property "Reference" "#PWR016"
+			(at 130.81 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7172,7 +7878,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 168.91 0)
+			(at 130.81 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7180,7 +7886,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 163.83 0)
+			(at 130.81 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7189,7 +7895,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 163.83 0)
+			(at 130.81 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7198,7 +7904,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 163.83 0)
+			(at 130.81 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7212,7 +7918,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR012")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7220,7 +7926,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 91.44 0)
+		(at 201.93 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7228,8 +7934,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "817d678f-c148-4490-a365-873d0ee0cb15")
-		(property "Reference" "#PWR020"
-			(at 171.45 97.79 0)
+		(property "Reference" "#PWR022"
+			(at 201.93 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7238,7 +7944,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 96.52 0)
+			(at 201.93 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7246,7 +7952,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 91.44 0)
+			(at 201.93 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7255,7 +7961,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 91.44 0)
+			(at 201.93 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7264,7 +7970,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 91.44 0)
+			(at 201.93 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7278,24 +7984,24 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+9V")
-		(at 236.22 44.45 0)
+		(lib_id "power:+3.3V")
+		(at 29.21 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "833bc59e-1505-4474-89b3-6a85abdbc4dd")
-		(property "Reference" "#PWR026"
-			(at 236.22 48.26 0)
+		(uuid "8304134e-3b07-40b5-8576-923b31626a82")
+		(property "Reference" "#PWR023"
+			(at 29.21 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7303,8 +8009,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+9V"
-			(at 236.22 39.37 0)
+		(property "Value" "+3.3V"
+			(at 29.21 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7312,7 +8018,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 44.45 0)
+			(at 29.21 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7321,7 +8027,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 44.45 0)
+			(at 29.21 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7329,75 +8035,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+9V\""
-			(at 236.22 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "508dc9d2-502e-4ed7-95d0-12620e0b9abf")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 266.7 107.95 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "83e9c538-9cce-4694-941f-010aeb29cd4b")
-		(property "Reference" "J3"
-			(at 267.97 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MOTOR1"
-			(at 267.97 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 266.7 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 266.7 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 266.7 107.95 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 29.21 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7406,85 +8045,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7fd9d362-cdbe-43a7-bcf2-6a82a5979fe7")
-		)
-		(pin "2"
-			(uuid "3217df33-709a-4d55-9cc4-8d28ba2b5f22")
+			(uuid "0919004e-6022-4232-ad90-0394ad05a1d5")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 266.7 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "883e9ddc-ebe8-432a-835b-790363c790c1")
-		(property "Reference" "J4"
-			(at 267.97 123.1899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MOTOR2"
-			(at 267.97 125.7299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 266.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 266.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 266.7 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7fd9d362-cdbe-43a7-bcf2-6a82a5979fe7")
-		)
-		(pin "2"
-			(uuid "3217df33-709a-4d55-9cc4-8d28ba2b5f22")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "J4")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7492,7 +8058,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 151.13 135.89 0)
+		(at 181.61 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7500,8 +8066,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c0ae944-c0a8-49b6-94cf-2eb20588fbf3")
-		(property "Reference" "#PWR018"
-			(at 151.13 142.24 0)
+		(property "Reference" "#PWR021"
+			(at 181.61 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7510,7 +8076,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 151.13 140.97 0)
+			(at 181.61 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7518,7 +8084,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 135.89 0)
+			(at 181.61 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7527,7 +8093,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 135.89 0)
+			(at 181.61 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7536,7 +8102,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 151.13 135.89 0)
+			(at 181.61 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7550,7 +8116,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR018")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7558,7 +8124,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 160.02 86.36 0)
+		(at 190.5 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7567,7 +8133,7 @@
 		(fields_autoplaced yes)
 		(uuid "90fcf789-7c2e-4242-b1f2-fad16cd81435")
 		(property "Reference" "C5"
-			(at 163.83 84.2009 0)
+			(at 194.31 38.4809 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7576,7 +8142,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 163.83 86.7409 0)
+			(at 194.31 41.0209 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7584,8 +8150,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 160.9852 90.17 0)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 191.4652 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7594,7 +8160,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 86.36 0)
+			(at 190.5 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7603,7 +8169,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 160.02 86.36 0)
+			(at 190.5 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7612,10 +8178,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b6")
 		)
 		(pin "2"
-			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5d001")
 		)
 		(instances
 			(project "robotika"
@@ -7636,7 +8202,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9320fa7e-06d7-457c-816b-2d26fd55c575")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR05"
 			(at 73.66 52.07 0)
 			(effects
 				(font
@@ -7686,7 +8252,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR09")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -7702,7 +8268,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "949e8b22-0044-48d3-84b0-5bb8de5db880")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR04"
 			(at 60.96 39.37 0)
 			(effects
 				(font
@@ -7752,73 +8318,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 208.28 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "967d73c5-25d7-4862-9163-6000173a8bb9")
-		(property "Reference" "#PWR021"
-			(at 208.28 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 208.28 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 208.28 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 208.28 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 208.28 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b977890b-307b-4331-ad23-e1bb06c9670a")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR021")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -7826,7 +8326,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 135.89 107.95 90)
+		(at 166.37 62.23 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7834,8 +8334,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97b9f77f-e972-4d9e-a01f-f3b18e72c6f3")
-		(property "Reference" "#PWR016"
-			(at 139.7 107.95 0)
+		(property "Reference" "#PWR019"
+			(at 170.18 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7844,7 +8344,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 132.08 107.9499 90)
+			(at 162.56 62.2299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7853,7 +8353,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 107.95 0)
+			(at 166.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7862,7 +8362,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 107.95 0)
+			(at 166.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7871,7 +8371,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 135.89 107.95 0)
+			(at 166.37 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7885,73 +8385,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 232.41 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "981b7638-2c44-4db9-b3c2-d5f35a7eba92")
-		(property "Reference" "#PWR024"
-			(at 232.41 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 232.41 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 232.41 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 232.41 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 232.41 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7345ae92-9eff-40cb-b140-2777161fbea9")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR024")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7967,7 +8401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a42dd1f-ea57-49a3-a6ed-e8901a705084")
-		(property "Reference" "C4"
+		(property "Reference" "C2"
 			(at 87.63 40.6399 0)
 			(effects
 				(font
@@ -7985,7 +8419,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 84.7852 45.72 0)
 			(effects
 				(font
@@ -8021,7 +8455,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C4")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -8037,7 +8471,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1158455-5fb9-4dea-a8b3-8bf800c56053")
-		(property "Reference" "C3"
+		(property "Reference" "C1"
 			(at 64.77 39.7509 0)
 			(effects
 				(font
@@ -8055,7 +8489,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
 			(at 61.9252 45.72 0)
 			(effects
 				(font
@@ -8083,32 +8517,48 @@
 			)
 		)
 		(pin "1"
-			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b4")
+			(uuid "b5b17137-e951-4cfd-ae13-6ce2cdeee3b7")
 		)
 		(pin "2"
-			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5cfff")
+			(uuid "6db9f3ce-a9e2-4fa5-8c8e-a305f0f5d002")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C3")
+					(reference "C1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 224.79 116.84 90)
+		(lib_id "Switch:SW_SPDT")
+		(at 105.41 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ba62d8f8-1162-4f65-980a-e561b5ab3c84")
-		(property "Reference" "#PWR022"
-			(at 228.6 116.84 0)
+		(uuid "a26cc7dc-342b-4019-b866-d0d95ae1c600")
+		(property "Reference" "SW2"
+			(at 105.41 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "power"
+			(at 105.41 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+			(at 105.41 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8116,17 +8566,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 220.98 116.8399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 224.79 116.84 0)
+		(property "Datasheet" "~"
+			(at 105.41 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8134,144 +8575,238 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 224.79 116.84 0)
+		(property "Description" "Switch, single pole double throw"
+			(at 105.41 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 224.79 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eee85caa-6893-4273-8fea-88fc913d64ab")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Driver_Motor:L293D")
-		(at 237.49 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c185ff18-3c8b-41d6-829b-4ab187a2f72d")
-		(property "Reference" "U6"
-			(at 242.2241 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "L293D"
-			(at 242.2241 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
-			(at 243.84 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/l293.pdf"
-			(at 229.87 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Quadruple Half-H Drivers"
-			(at 237.49 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "13"
-			(uuid "c5660ca0-b374-43e9-9ae9-f7ddd61d787b")
-		)
-		(pin "1"
-			(uuid "46a0d0da-828d-4e9a-b1ef-d2bc9784f3f9")
-		)
-		(pin "14"
-			(uuid "24084ac6-b938-4c57-aa16-73831624bcf2")
-		)
-		(pin "7"
-			(uuid "bc14784d-0ec7-40ea-84b0-a1ffa0b0f220")
-		)
-		(pin "9"
-			(uuid "c9031020-f3e3-4ddd-98a3-0a8989262090")
-		)
-		(pin "15"
-			(uuid "7ba63f79-1245-44c4-bc3b-2fccb4676d50")
-		)
-		(pin "2"
-			(uuid "045f6fbc-df43-4e08-bfb6-bc74573bfcb0")
-		)
-		(pin "11"
-			(uuid "644aa513-7a28-4596-8451-c4cb4f5e7d79")
-		)
-		(pin "6"
-			(uuid "6081ce95-540f-405d-9a5b-e3af1889acee")
 		)
 		(pin "3"
-			(uuid "fab9c64d-6431-442b-8a52-eead47be9ac4")
+			(uuid "2c9f308c-b304-4aba-8578-9c497c421acb")
 		)
-		(pin "4"
-			(uuid "db57dbb6-8bc9-4b90-843c-d25caca95afb")
+		(pin "2"
+			(uuid "964602d3-b85f-4da4-90b7-06d544faced3")
 		)
-		(pin "8"
-			(uuid "f15177da-842b-4601-8d63-08633c2def63")
-		)
-		(pin "12"
-			(uuid "e1d58b36-e01d-4a8d-bdd2-72ce28b8b53d")
-		)
-		(pin "16"
-			(uuid "937aa1a8-a9d7-480e-b7d2-5ac8d2524306")
-		)
-		(pin "5"
-			(uuid "13ffce96-70ad-4bc5-acff-3625d87e29cb")
-		)
-		(pin "10"
-			(uuid "268483a5-45ed-4b46-b7b5-ddbbb0e0e834")
+		(pin "1"
+			(uuid "478299fa-e95f-4ec9-968c-5715269088f9")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "U6")
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 266.7 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7984671-7c75-4ab3-bb32-0b5422029b4e")
+		(property "Reference" "J4"
+			(at 267.97 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MOTOR2"
+			(at 267.97 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 266.7 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 266.7 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc0c5dd3-8026-47cd-b5fd-ec424758c872")
+		)
+		(pin "2"
+			(uuid "6731411e-9ba6-4fae-a6bd-c18498641682")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 53.34 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3d971ad-bdc1-4fbc-bb62-40039c94691d")
+		(property "Reference" "C9"
+			(at 57.15 145.1609 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 57.15 147.7009 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 54.3052 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.34 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 53.34 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2b9bbbc-33a4-4aeb-9fa5-aee27c27af42")
+		)
+		(pin "2"
+			(uuid "56eea308-f1e8-4997-9176-7cfc74d491ae")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 29.21 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be9bedfe-4137-4697-8504-71dd3c106bd2")
+		(property "Reference" "C8"
+			(at 33.02 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 33.02 148.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 30.1752 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 29.21 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 29.21 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e350f8db-e460-49c1-b8ea-364cf7399c76")
+		)
+		(pin "2"
+			(uuid "fe9b52fc-a096-4288-a33b-0c16bd04d97e")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -8279,7 +8814,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 157.48 0)
+		(at 100.33 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8287,8 +8822,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c48a3cd8-14fe-4b98-b4d6-6427d255b1ef")
-		(property "Reference" "#PWR06"
-			(at 48.26 163.83 0)
+		(property "Reference" "#PWR012"
+			(at 100.33 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8297,7 +8832,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 162.56 0)
+			(at 100.33 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8305,7 +8840,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 157.48 0)
+			(at 100.33 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8314,7 +8849,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 157.48 0)
+			(at 100.33 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8323,7 +8858,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 157.48 0)
+			(at 100.33 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8337,7 +8872,73 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR06")
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca0b3c1a-84a1-4653-958c-e084b0d7302a")
+		(property "Reference" "#PWR031"
+			(at 109.22 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 109.22 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b1f819b-0612-4bda-8a2b-2279ecbe616e")
+		)
+		(instances
+			(project "robotika"
+				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -8353,7 +8954,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf6523c7-b093-4c0e-8e5a-0ae7e8f0265b")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR08"
 			(at 83.82 77.47 0)
 			(effects
 				(font
@@ -8403,7 +9004,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR014")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -8411,7 +9012,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 128.27 91.44 0)
+		(at 158.75 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8420,7 +9021,7 @@
 		(fields_autoplaced yes)
 		(uuid "d01fd8e6-3b62-4237-b88c-0963013f5764")
 		(property "Reference" "R3"
-			(at 130.81 90.1699 0)
+			(at 161.29 44.4499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8429,7 +9030,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 130.81 92.7099 0)
+			(at 161.29 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8438,7 +9039,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 126.492 91.44 90)
+			(at 156.972 45.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8447,7 +9048,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 128.27 91.44 0)
+			(at 158.75 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8456,7 +9057,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 128.27 91.44 0)
+			(at 158.75 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8481,7 +9082,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 48.26 142.24 0)
+		(at 100.33 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8489,8 +9090,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d44e17f9-a23c-4617-9819-5d5ee6d7308c")
-		(property "Reference" "#PWR05"
-			(at 48.26 146.05 0)
+		(property "Reference" "#PWR011"
+			(at 100.33 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8499,7 +9100,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 48.26 137.16 0)
+			(at 100.33 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8507,7 +9108,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 142.24 0)
+			(at 100.33 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8516,7 +9117,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 142.24 0)
+			(at 100.33 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8525,7 +9126,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 48.26 142.24 0)
+			(at 100.33 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8539,7 +9140,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR05")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -8613,7 +9214,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 182.88 86.36 0)
+		(at 213.36 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8621,8 +9222,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea57c03e-4e3d-484a-be5c-a475478d8196")
-		(property "Reference" "C8"
-			(at 186.69 85.0899 0)
+		(property "Reference" "C7"
+			(at 217.17 39.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8631,7 +9232,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 186.69 87.6299 0)
+			(at 217.17 41.9099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8639,8 +9240,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 183.8452 90.17 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 214.3252 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8649,7 +9250,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 182.88 86.36 0)
+			(at 213.36 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8658,7 +9259,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 182.88 86.36 0)
+			(at 213.36 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8675,7 +9276,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "C8")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -8691,7 +9292,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb804995-9f49-4ba8-93b0-2b64af246dfc")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR02"
 			(at 36.83 99.06 0)
 			(effects
 				(font
@@ -8741,39 +9342,42 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR04")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 243.84 44.45 0)
+		(lib_id "Mechanical:MountingHole")
+		(at 162.56 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f36fc669-e256-487b-b658-ef3d569275e7")
-		(property "Reference" "SW2"
-			(at 243.84 38.1 0)
+		(fields_autoplaced yes)
+		(uuid "f1151c23-9ed3-4a91-80fa-2c91c556fa04")
+		(property "Reference" "H3"
+			(at 165.1 126.9999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "POWER"
-			(at 243.84 40.64 0)
+		(property "Value" "MountingHole"
+			(at 165.1 129.5399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 243.84 44.45 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 162.56 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8782,7 +9386,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 243.84 44.45 0)
+			(at 162.56 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8790,25 +9394,19 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 243.84 44.45 0)
+		(property "Description" "Mounting Hole without connection"
+			(at 162.56 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "a2022891-4485-48d4-96f3-9548bb233c04")
-		)
-		(pin "2"
-			(uuid "a9942e83-0cf1-4fa6-b7d7-df4049385c96")
 		)
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "SW2")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -8816,7 +9414,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 114.3 105.41 0)
+		(at 144.78 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8824,8 +9422,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4ec94e8-6d72-44e0-9699-722e7dbf6105")
-		(property "Reference" "#PWR015"
-			(at 114.3 111.76 0)
+		(property "Reference" "#PWR018"
+			(at 144.78 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8834,7 +9432,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 114.3 110.49 0)
+			(at 144.78 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8842,7 +9440,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 114.3 105.41 0)
+			(at 144.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8851,7 +9449,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 105.41 0)
+			(at 144.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8860,7 +9458,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 114.3 105.41 0)
+			(at 144.78 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8874,7 +9472,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR015")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -8890,7 +9488,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fafef6ac-b799-4ab6-83b8-f91e5e18fada")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR03"
 			(at 55.88 55.88 0)
 			(effects
 				(font
@@ -8940,7 +9538,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR07")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -8956,7 +9554,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcc2dc28-451e-4e6f-8944-e2f7be0eff96")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR06"
 			(at 74.93 77.47 0)
 			(effects
 				(font
@@ -9006,73 +9604,7 @@
 		(instances
 			(project "robotika"
 				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 234.95 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fd99afbf-0835-41dc-baa0-19229e004cda")
-		(property "Reference" "#PWR025"
-			(at 234.95 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 234.95 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 234.95 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 234.95 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d216c738-839a-4371-879a-2ef81ab71ef5")
-		)
-		(instances
-			(project "robotika"
-				(path "/76f42abf-c600-4637-8eec-ad58424b3a2a"
-					(reference "#PWR025")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)

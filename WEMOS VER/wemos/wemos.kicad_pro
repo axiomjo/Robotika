@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.09999999999999999,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.18
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -179,7 +179,6 @@
       "track_widths": [
         0.0,
         0.2,
-        0.25,
         0.5,
         1.0,
         1.2,
@@ -449,7 +448,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "robotika.kicad_pro",
+    "filename": "wemos.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -593,7 +592,7 @@
   },
   "sheets": [
     [
-      "76f42abf-c600-4637-8eec-ad58424b3a2a",
+      "2ce77040-cfc1-475e-b4fd-779c85eca747",
       "Root"
     ]
   ],
