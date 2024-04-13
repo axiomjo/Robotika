@@ -16,4 +16,12 @@ dokumentasinya apik seh. dari WeMos sendiri.
 https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html
 
 https://docs.micropython.org/en/latest/esp8266/quickref.html
+
+
+===================================
+this one is talking abaout telemetry. looks cool, blo ngunyah.
+https://docs.wpilib.org/en/stable/docs/software/telemetry/robot-telemetry-with-sendable.html
+
+this more specifically has 
+https://github.com/Mechanical-Advantage/AdvantageScope
 */
