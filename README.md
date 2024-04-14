@@ -13,6 +13,10 @@ Specs:
 
 
 To-Do:
-1. nyoba arus dinamo pakai 293d kuat ndak - kuat
-2. steering = pakai program / pwm
-3. led strip?
+1. steering = pakai program / pwm
+2. led strip, added to pcb, program?
+
+Update:
+14/4/2024 - PCB done, 2 versions available: With/without LED using 4 wire SPI
+
+
