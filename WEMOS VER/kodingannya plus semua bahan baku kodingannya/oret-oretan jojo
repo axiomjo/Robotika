@@ -1,0 +1,27 @@
+//ini juga cuma placeholder supaya bisa bikin folder WLWWKWKWKKW
+// hm, please wait till night. rumahku mati lampu dan hpku blom dicas sisa 13%
+
+
+/*
+klu arduino ide kudu 
+
+https://github.com/esp8266/Arduino
+
+https://www.instructables.com/Wemos-ESP8266-Getting-Started-Guide-Wemos-101/
+
+==========================
+klu micropython, kyknya lebih awam-friendly(?)
+dokumentasinya apik seh. dari WeMos sendiri.
+
+https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html
+
+https://docs.micropython.org/en/latest/esp8266/quickref.html
+
+
+===================================
+this one is talking abaout telemetry. looks cool, blo ngunyah.
+https://docs.wpilib.org/en/stable/docs/software/telemetry/robot-telemetry-with-sendable.html
+
+this more specifically has 
+https://github.com/Mechanical-Advantage/AdvantageScope
+*/
