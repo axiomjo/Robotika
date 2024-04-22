@@ -3,6 +3,8 @@
 todo:
 - ngoding state machine buat kondisi mobilnya
 - ngoding state machine buat controllernya
+https://github.com/jonblack/arduino-fsm.git
+PAKE REPO INI WKWKWKWK 
 
 - nyambungin laptop ke wemos pake wifi (prototyping)
 - nyambungin controller ke wemos (fin. product)
@@ -10,7 +12,8 @@ todo:
 - bikin & ngoding movement function list: (sek, aku masih blom isa mbayangin robotnya. perlu ke perpus B dulu)
 
 - bikin user interface di laptop(prototyping)
-- bikin user interface di controllernya (fin. product)
+- bikin user interface di HP pake flutterflow (fin. product)
+iIKI FLUTTERFLOW EKWKWKWK https://flutterflow.io/
 
 /*
 klu arduino ide kudu 
