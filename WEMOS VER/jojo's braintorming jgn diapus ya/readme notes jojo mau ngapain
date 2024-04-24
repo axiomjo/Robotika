@@ -1,0 +1,61 @@
+
+
+todo:
+- ngoding state machine buat kondisi mobilnya
+- ngoding state machine buat controllernya
+https://github.com/jonblack/arduino-fsm.git
+PAKE REPO INI WKWKWKWK 
+
+-ngmpulin library arduino yg dipake
+
+- nyambungin laptop ke wemos pake wifi (prototyping)
+- nyambungin controller ke wemos (fin. product)
+- bikin & ngoding movement function list: 
+
+- bikin user interface di laptop(prototyping)
+- bikin user interface di HP pake flutterflow (fin. product)
+iIKI FLUTTERFLOW EKWKWKWK https://flutterflow.io/
+
+/*
+klu arduino ide kudu 
+https://github.com/esp8266/Arduino
+
+supaya bisa wifi kudu
+https://arduino-esp8266.readthedocs.io/en/3.1.2/esp8266wifi/readme.html
+
+klo pake micropython(?)
+https://docs.micropython.org/en/latest/esp8266/quickref.html
+
+this telemetry. looks cool, blo ngunyah.
+https://docs.wpilib.org/en/stable/docs/software/telemetry/robot-telemetry-with-sendable.html
+
+ini examplecode pake wplib
+https://docs.limelightvision.io/docs/docs-limelight/tutorials/tutorial-frc-robot-2019
+
+
+
+this more specifically has 
+this, more specifically has 
+https://github.com/Mechanical-Advantage/AdvantageScope
+
+
+
+===================================
+ok, aku baru nangkep knp motornya 2. 
+https://en.wikipedia.org/wiki/Differential_wheeled_robot
+
+yg ini mirip ish bentuk umumnya?
+simetris, waffle2, kotak?
+https://www.turtlebot.com/
+
+
+=================
+namanya menarik. myb it'll makes life easier? idunno yet
+https://www.openrobotics.org/
+
+https://robots.ros.org/
+https://docs.ros.org/en/iron/Tutorials.html
+
+
+
+
