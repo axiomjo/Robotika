@@ -2,9 +2,14 @@
 
 const char* ssid = "Qbar";
 const char* password = "3Dward2@22";
+
+const char* ssid2 = "AP TEST";
+const char* password2 = "";
+
 const int ledPin = LED_BUILTIN;
 
 String header;
+bool motorRunning = 0;
 
 const char* html = R""""(
 HTTP/1.1 200 OK
@@ -163,26 +168,27 @@ void setup() {
   Serial.begin(115200);
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, 0);
-  // Serial.print("Setting AP (Access Point)…");
-  // WiFi.softAP(ssid, password);
 
-  // IPAddress IP = WiFi.softAPIP();
-  // Serial.print("AP IP address: ");
-  // Serial.println(IP);
+  Serial.print("Setting AP (Access Point)…");
+  WiFi.softAP(ssid2);
 
-  // Connect to Wi-Fi network with SSID and password
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  // Print local IP address and start web server
-  Serial.println("");
-  Serial.println("WiFi connected.");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
+
+  // // Connect to Wi-Fi network with SSID and password
+  // Serial.print("Connecting to ");
+  // Serial.println(ssid);
+  // WiFi.begin(ssid, password);
+  // while (WiFi.status() != WL_CONNECTED) {
+  //   delay(500);
+  //   Serial.print(".");
+  // }
+  // // Print local IP address and start web server
+  // Serial.println("");
+  // Serial.println("WiFi connected.");
+  // Serial.println("IP address: ");
+  // Serial.println(WiFi.localIP());
 
   server.begin();
 }
@@ -208,55 +214,33 @@ void loop() {
         }
 
 
-        if (currentLine.endsWith("GET /motor/forward")) {
+        if (currentLine.endsWith("GET /motor/forward")&& motorRunning == 0) {
           digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
+          motorRunning = 1;
+          delay(10);
         }
-        if (currentLine.endsWith("GET /motor/reverse")) {
+        if (currentLine.endsWith("GET /motor/reverse")&& motorRunning == 0) {
           digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
+          motorRunning = 1;
+          delay(10);
+
         }
-        if (currentLine.endsWith("GET /motor/left")) {
+        if (currentLine.endsWith("GET /motor/left")&& motorRunning == 0) {
           digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
+          motorRunning = 1;
+          delay(10);
+
         }
-        if (currentLine.endsWith("GET /motor/right")) {
+        if (currentLine.endsWith("GET /motor/right") && motorRunning == 0) {
           digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
-          digitalWrite(ledPin, 1);
-          delay(200);
-          digitalWrite(ledPin, 0);
-          delay(200);
+          motorRunning = 1;
+          delay(10);
+          
         }
-        if (currentLine.endsWith("GET /motor/off")) {
+        if (currentLine.endsWith("GET /motor/off") && motorRunning == 1) {
+          digitalWrite(ledPin, 0);
+          motorRunning = 0;
+          delay(10);
         }
       }
     }
