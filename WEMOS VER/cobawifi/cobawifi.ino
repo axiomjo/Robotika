@@ -3,8 +3,8 @@
 
 #include "WiFi.h"
 
-const char* ssid = "webserver test";
-const char* password = "11111111";
+const char* ssid = "Lab Elka";
+const char* password = "labelkal307";
 const int ledPin = LED_BUILTIN;
 
 
