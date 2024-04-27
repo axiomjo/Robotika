@@ -3,7 +3,7 @@
 const char* ssid = "Qbar";
 const char* password = "3Dward2@22";
 
-const char* ssid2 = "AP TEST";
+const char* ssid2 = "wemosssssssss";
 const char* password2 = "";
 
 const int ledPin = LED_BUILTIN;
