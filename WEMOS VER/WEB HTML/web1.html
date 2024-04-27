@@ -14,9 +14,6 @@
             justify-content: flex-start;
             align-items: center;
             height: 100vh;
-            background-image: url('bg.png');
-            background-size: cover;
-            background-position: center;
         }
 
         .center-line {
@@ -60,11 +57,9 @@
             border: none;
             color: white;
             font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .diamond-button:hover {
+        .diamond-button:active {
             background-color: #fc90e7;
         }
 
@@ -98,7 +93,7 @@
                 -2px -2px 0 #fff,  
                 2px -2px 0 #fff,
                 -2px 2px 0 #fff,
-                2px 2px 0 #fff; /* Add white border around the text */
+                2px 2px 0 #fff;
         }
     </style>
 </head>
@@ -109,12 +104,42 @@
     </div>
     <div class="diamond-container">
         <div class="diamond-container-inner">
-            <button class="diamond-button diamond-button-top">Maju</button>
-            <button class="diamond-button diamond-button-bottom">Mundur</button>
-            <button class="diamond-button diamond-button-left">Kiri</button>
-            <button class="diamond-button diamond-button-right">Kanan</button>
+            <button class="diamond-button diamond-button-top" onmousedown="turnOn(1)" onmouseup="turnOff(1)" ontouchstart="turnOn(1)" ontouchend="turnOff(1)">Maju</button>
+            <button class="diamond-button diamond-button-bottom" onmousedown="turnOn(2)" onmouseup="turnOff(2)" ontouchstart="turnOn(2)" ontouchend="turnOff(2)">Mundur</button>
+            <button class="diamond-button diamond-button-left" onmousedown="turnOn(3)" onmouseup="turnOff(3)" ontouchstart="turnOn(3)" ontouchend="turnOff(3)">Kiri</button>
+            <button class="diamond-button diamond-button-right" onmousedown="turnOn(4)" onmouseup="turnOff(4)" ontouchstart="turnOn(4)" ontouchend="turnOff(4)">Kanan</button>
         </div>
     </div>
+
+    <script>
+        function turnOn(buttonId) {
+            (buttonId == 1) ? forward() : (buttonId == 2) ? reverse() : (buttonId == 3) ? left() : right();
+        }
+
+        function turnOff(buttonId) {
+            motorOff();
+        }
+
+        function forward(){
+            fetch("/motor/forward");
+        }
+
+        function reverse(){
+            fetch("/motor/reverse");
+        }
+
+        function left(){
+            fetch("/motor/left");
+        }
+
+        function right(){
+            fetch("/motor/right");
+        }
+
+        function motorOff(){
+            fetch("/motor/off")
+        }
+    </script>
 </body>
 
 </html>
